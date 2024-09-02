@@ -65,11 +65,17 @@ public class FlowManager : MonoBehaviour
             if (this!= instance)
                 Destroy(gameObject);
         }
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    void Start()
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        StartScenario(scenarioData);
+        Debug.Log("Scene " + scene.name + " loaded.");
+        if(scene.name == "FirstGameScene")
+        {
+            StartScenario(scenarioData);
+        }
     }
 
     IEnumerator ShowText()
@@ -119,7 +125,8 @@ public class FlowManager : MonoBehaviour
                 StartScenario(scenarioData.nextScenario);
             }
         } else {
-            StopCoroutine(textCor);
+            if (textCor!= null)
+                StopCoroutine(textCor);
             textBox.text = currentText;
             textComplete = true;
             optionCor = StartCoroutine(ShowOptions());
@@ -154,7 +161,7 @@ public class FlowManager : MonoBehaviour
         if (scenarioData.changeScene && isinMainFlow)
         {
             isinMainFlow = false;
-            SceneManager.LoadScene(newScenarioData.sceneName);
+            SceneManager.LoadScene(scenarioData.sceneName);
             return;
         }
         isinMainFlow = true;
