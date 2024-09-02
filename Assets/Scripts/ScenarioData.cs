@@ -42,8 +42,7 @@ public class ScenarioData : ScriptableObject
     public AudioClip audioClip;
     public float audioVolume = 1;
 
-    [Header("배경음 변경 여부")]
-    public bool changeBackgroundMusic;
+    [Header("배경음 설정")]
     public AudioClip backgroundMusic;
     public float backgroundMusicVolume = 1;
 }
