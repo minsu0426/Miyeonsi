@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 public class mg1InGame : MonoBehaviour
 {
@@ -39,9 +40,9 @@ public class mg1InGame : MonoBehaviour
         {
             kwang.SetActive(true);
         }
-        if (myNum == 50)
+        if (myNum >= 50)
         {
-            //nextscene
+            SceneManager.LoadScene(FlowManager.Instance.mainGameSceneName);
         }
 
     }

@@ -75,7 +75,7 @@ public class FlowManager : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Debug.Log("Scene " + scene.name + " loaded.");
-        if(scene.name == "FirstGameScene")
+        if(scene.name == mainGameSceneName)
         {
             StartScenario(scenarioData);
         }
@@ -165,6 +165,7 @@ public class FlowManager : MonoBehaviour
         {
             isinMainFlow = false;
             SceneManager.LoadScene(scenarioData.sceneName);
+            scenarioData = newScenarioData;
             return;
         }
         isinMainFlow = true;
