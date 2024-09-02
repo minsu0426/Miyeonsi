@@ -11,6 +11,7 @@ public class mg1InGame : MonoBehaviour
 {
     // Start is called before the first frame update
     int myNum;
+    int myNum3;
     public int myNum2;
     public GameObject door;
     public TextMeshProUGUI numTxt;
@@ -19,7 +20,6 @@ public class mg1InGame : MonoBehaviour
     {
         Debug.Log("HelloWorld!!");
         myNum2 = 30;
-        numTxt.text = "0";
         kwang.SetActive(false);
     }
 
@@ -32,15 +32,15 @@ public class mg1InGame : MonoBehaviour
     {
         Debug.Log("Click!!");
         myNum++;
-        Debug.Log("myNum: " + myNum);
-        numTxt.text = myNum.ToString();
-        
+        myNum3++;
 
         if (myNum >= myNum2)
         {
             kwang.SetActive(true);
+            door.SetActive(false);
         }
-        if (myNum >= 50)
+
+        if (myNum3 >= 50)
         {
             SceneManager.LoadScene(FlowManager.Instance.mainGameSceneName);
         }
