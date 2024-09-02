@@ -21,7 +21,7 @@ MonoBehaviour:
   options:
   - optionText: "\uBBFC\uC218"
     fontSize: 30
-    optionResult: {fileID: 0}
+    optionResult: {fileID: 11400000, guid: 231b2db5056911246b4aa599cb326fef, type: 2}
   - optionText: "\uD604\uC131"
     fontSize: 30
     optionResult: {fileID: 11400000, guid: f3d059d16567a8e47a4ed8714b202362, type: 2}

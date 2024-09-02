@@ -694,7 +694,7 @@ MonoBehaviour:
   imageMiddle: {fileID: 1181081280}
   imageRight: {fileID: 17136067}
   imageFront: {fileID: 2003283815}
-  scenarioData: {fileID: 11400000, guid: 11725ce3b4d2be64eb277983266bae64, type: 2}
+  scenarioData: {fileID: 11400000, guid: c6d05b1a4c1b58d4fb7063a4450ea20d, type: 2}
   playerName: main
   mainGameSceneName: FirstGameScene
 --- !u!4 &758153932
