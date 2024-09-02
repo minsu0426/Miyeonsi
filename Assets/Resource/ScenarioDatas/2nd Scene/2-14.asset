@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 2-14
   m_EditorClassIdentifier: 
   CharacterName: $player
-  text: "\uAE5C\uC9DD\uC774\uC57C! \uB108 \uD604\uC131\uC544 \uB108 \uC5B8\uC81C\uC654\uC5B4??\r\n"
+  text: "\uAE5C\uC9DD\uC774\uC57C! \uD604\uC131\uC544 \uB108 \uC5B8\uC81C\uC654\uC5B4??\r\n"
   fontSize: 45
   textSpeed: 15
   hasOption: 0
@@ -26,5 +26,8 @@ MonoBehaviour:
   imageMiddle: {fileID: 0}
   imageRight: {fileID: 0}
   imageFront: {fileID: 0}
-  audioClip: {fileID: 0}
-  audioVolume: 1
+  soundEffect: {fileID: 0}
+  SoundEffectVolume: 1
+  ChangeBackgroundMusic: 0
+  backgroundMusic: {fileID: 0}
+  backgroundMusicVolume: 1
