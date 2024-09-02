@@ -1007,7 +1007,7 @@ MonoBehaviour:
   nameBox: {fileID: 0}
   optionBox: {fileID: 0}
   options: []
-  optionPrefab: {fileID: 0}
+  optionPrefab: {fileID: 1134514841307949695, guid: 1c277a2e6127a234ab1e1865c00578a9, type: 3}
   background: {fileID: 0}
   imageLeft: {fileID: 0}
   imageMiddle: {fileID: 0}
