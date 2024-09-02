@@ -10,15 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a698fc3fa7a41143b9f8100752b8a65, type: 3}
-  m_Name: 6-3
+  m_Name: 6-16
   m_EditorClassIdentifier: 
-  CharacterName: 
-  text: "\uAC70\uB300\uD55C \uAC74\uBB3C\uC5D0\uB294 \uC6B0\uB9AC\uC758 \uBC1C\uC790\uAD6D
-    \uC18C\uB9AC\uB9CC \uC6B8\uB9B4 \uBFD0\uC774\uC600\uB2E4."
+  CharacterName: $player
+  text: "\uC5B4\u2026 \uC774\uC815\uB3C4\uBA74 \uAD1C\uCC2E"
   fontSize: 45
   textSpeed: 15
   hasOption: 0
-  nextScenario: {fileID: 11400000, guid: 920b82ffb08ad9945b5b5b10a4fd39e4, type: 2}
+  nextScenario: {fileID: 11400000, guid: 0fe8f88d1ae0a424eafe99cc74cbf760, type: 2}
   options: []
   changeScene: 0
   sceneName: 
