@@ -21,7 +21,7 @@ MonoBehaviour:
   options: []
   changeScene: 0
   sceneName: 
-  background: {fileID: 0}
+  background: {fileID: 21300000, guid: 4506c900365154a4894d00fd6290fad3, type: 3}
   imageLeft: {fileID: 0}
   imageMiddle: {fileID: 0}
   imageRight: {fileID: 0}

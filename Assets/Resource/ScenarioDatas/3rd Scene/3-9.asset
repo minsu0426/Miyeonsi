@@ -21,7 +21,10 @@ MonoBehaviour:
   options: []
   changeScene: 0
   sceneName: 
-  background: {fileID: 0}
+  background: {fileID: 21300000, guid: 2ef2d6daad69cdc44b2bf3550ce2a1d9, type: 3}
   imageLeft: {fileID: 0}
   imageMiddle: {fileID: 0}
   imageRight: {fileID: 0}
+  imageFront: {fileID: 0}
+  audioClip: {fileID: 0}
+  audioVolume: 1
