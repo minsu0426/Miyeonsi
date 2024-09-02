@@ -212,6 +212,11 @@ public class FlowManager : MonoBehaviour
             AudioController.instance.PlayAudio(scenarioData.audioClip, scenarioData.audioVolume);
         }
 
+        if (scenarioData.background != null)
+        {
+            //
+        }
+
         if (MainCanvasObject == null)
         {
             MainCanvasObject = GameObject.Find("MainCanvas");
