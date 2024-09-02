@@ -29,5 +29,6 @@ MonoBehaviour:
   imageFront: {fileID: 0}
   soundEffect: {fileID: 8300000, guid: c9d60e26508287149bd3690e2c158704, type: 3}
   SoundEffectVolume: 1
+  ChangeBackgroundMusic: 0
   backgroundMusic: {fileID: 0}
   backgroundMusicVolume: 1

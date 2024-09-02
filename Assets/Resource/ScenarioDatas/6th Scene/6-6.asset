@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CharacterName: 
   text: "//\uBB34\uC5B8\uAC00 \uAC78\uB9AC\uB294 \uC18C\uB9AC"
-  fontSize: 30
-  textSpeed: 10
+  fontSize: 45
+  textSpeed: 15
   hasOption: 0
   nextScenario: {fileID: 11400000, guid: e5805ce6d06dda449ac53787852eff56, type: 2}
   options: []
@@ -28,5 +28,6 @@ MonoBehaviour:
   imageFront: {fileID: 0}
   soundEffect: {fileID: 8300000, guid: 1dfc06ac16055e64e8f25cc5bbde157e, type: 3}
   SoundEffectVolume: 1
+  ChangeBackgroundMusic: 0
   backgroundMusic: {fileID: 0}
   backgroundMusicVolume: 1
