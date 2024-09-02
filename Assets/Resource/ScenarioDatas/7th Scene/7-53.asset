@@ -27,7 +27,7 @@ MonoBehaviour:
     optionResult: {fileID: 11400000, guid: f3d059d16567a8e47a4ed8714b202362, type: 2}
   changeScene: 0
   sceneName: 
-  background: {fileID: 0}
+  background: {fileID: 21300000, guid: a14f6460bcf1c3443b106b4bcf47b2f4, type: 3}
   imageLeft: {fileID: 0}
   imageMiddle: {fileID: 0}
   imageRight: {fileID: 0}
