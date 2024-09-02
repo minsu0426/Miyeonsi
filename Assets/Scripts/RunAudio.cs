@@ -2,14 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BackgroundMusicManager : MonoBehaviour
+public class RunAudio : MonoBehaviour
 {
-    private AudioSource audioSource;
+    public AudioSource audioSource;
 
     void Start()
     {
-        // AudioSource 컴포넌트 추가 및 기본 설정
-        audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.loop = true; // 반복 재생 설정
         audioSource.playOnAwake = false; // 게임 시작 시 자동 재생되지 않도록 설정
     }
