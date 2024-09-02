@@ -6,24 +6,24 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int health = 5;  // ÃÊ±â Ã¼·Â °ª
-    public int maxHealth = 5;  // ÃÖ´ë Ã¼·Â °ª
-    public Image[] hearts;  // ÇÏÆ® ¾ÆÀÌÄÜ ¹è¿­
-    public float timeLimit = 30f;  // Å¸ÀÌ¸Ó ½Ã°£ (ÃÊ)
-    private bool gameCleared = false;  // °ÔÀÓ Å¬¸®¾î ¿©ºÎ
+    public int health = 5;  // ï¿½Ê±ï¿½ Ã¼ï¿½ï¿½ ï¿½ï¿½
+    public int maxHealth = 5;  // ï¿½Ö´ï¿½ Ã¼ï¿½ï¿½ ï¿½ï¿½
+    public Image[] hearts;  // ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­
+    public float timeLimit = 30f;  // Å¸ï¿½Ì¸ï¿½ ï¿½Ã°ï¿½ (ï¿½ï¿½)
+    private bool gameCleared = false;  // ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     private float timeRemaining;
 
-    public Text timerText; // UI¿¡ Å¸ÀÌ¸Ó¸¦ Ç¥½ÃÇÒ ÅØ½ºÆ®
+    public Text timerText; // UIï¿½ï¿½ Å¸ï¿½Ì¸Ó¸ï¿½ Ç¥ï¿½ï¿½ï¿½ï¿½ ï¿½Ø½ï¿½Æ®
 
     void Start()
     {
         timeRemaining = timeLimit;
-        UpdateHearts(); // ÃÊ±â »óÅÂ¿¡¼­ ÇÏÆ® UI ¾÷µ¥ÀÌÆ®
+        UpdateHearts(); // ï¿½Ê±ï¿½ ï¿½ï¿½ï¿½Â¿ï¿½ï¿½ï¿½ ï¿½ï¿½Æ® UI ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
     }
 
     void Update()
     {
-        // Å¸ÀÌ¸Ó ¾÷µ¥ÀÌÆ®
+        // Å¸ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
         if (!gameCleared)
         {
             timeRemaining -= Time.deltaTime;
@@ -33,7 +33,7 @@ public class PlayerHealth : MonoBehaviour
                 GameClear();
             }
 
-            // Å¸ÀÌ¸Ó ÅØ½ºÆ® ¾÷µ¥ÀÌÆ®
+            // Å¸ï¿½Ì¸ï¿½ ï¿½Ø½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
             if (timerText != null)
             {
                 timerText.text = "Time: " + Mathf.Ceil(timeRemaining).ToString();
@@ -46,7 +46,7 @@ public class PlayerHealth : MonoBehaviour
         health -= damage;
         Debug.Log("Player Health: " + health);
 
-        // Ã¼·Â °¨¼Ò¿¡ µû¶ó ÇÏÆ® ¾ÆÀÌÄÜÀ» ¾÷µ¥ÀÌÆ®
+        // Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½Ò¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
         UpdateHearts();
 
         if (health <= 0 && !gameCleared)
@@ -61,7 +61,7 @@ public class PlayerHealth : MonoBehaviour
         health += amount;
         if (health > maxHealth)
         {
-            health = maxHealth;  // Ã¼·ÂÀÌ ÃÖ´ë Ã¼·ÂÀ» ³ÑÁö ¾Êµµ·Ï Á¦ÇÑ
+            health = maxHealth;  // Ã¼ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ Ã¼ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Êµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         }
 
         UpdateHearts();
@@ -69,16 +69,16 @@ public class PlayerHealth : MonoBehaviour
 
     void UpdateHearts()
     {
-        // ÇöÀç Ã¼·Â »óÅÂ¿¡ ¸ÂÃç ÇÏÆ® ¾ÆÀÌÄÜÀ» ¾÷µ¥ÀÌÆ®
+        // ï¿½ï¿½ï¿½ï¿½ Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½Â¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
         for (int i = 0; i < hearts.Length; i++)
         {
             if (i < health)
             {
-                hearts[i].enabled = true;  // Ã¼·ÂÀÌ ³²¾ÆÀÖ´Â °æ¿ì ÇÏÆ® Ç¥½Ã
+                hearts[i].enabled = true;  // Ã¼ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½Æ® Ç¥ï¿½ï¿½
             }
             else
             {
-                hearts[i].enabled = false;  // Ã¼·ÂÀÌ ¾ø´Â °æ¿ì ÇÏÆ® ¼û±â±â
+                hearts[i].enabled = false;  // Ã¼ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½
             }
         }
     }
@@ -87,14 +87,14 @@ public class PlayerHealth : MonoBehaviour
     {
         gameCleared = true;
         Debug.Log("Game Cleared!");
-        // °ÔÀÓ Å¬¸®¾î Ã³¸® ·ÎÁ÷ (¿¹: Å¬¸®¾î ¾ÀÀ¸·Î ÀüÈ¯)
-        SceneManager.LoadScene("GameClearScene2");
+        // ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½: Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯)
+        SceneManager.LoadScene(FlowManager.Instance.mainGameSceneName);
 
     }
 
     void GameOver()
     {
-        // °ÔÀÓ ¿À¹ö Ã³¸® ·ÎÁ÷
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         Debug.Log("Game Over!");
         SceneManager.LoadScene("GameOverScene2");
     }
@@ -103,8 +103,8 @@ public class PlayerHealth : MonoBehaviour
     {
         if (other.CompareTag("Cake"))
         {
-            Heal(1);  // Ã¼·ÂÀ» 1 È¸º¹
-            Destroy(other.gameObject);  // ÄÉÀÌÅ©¸¦ ÆÄ±«
+            Heal(1);  // Ã¼ï¿½ï¿½ï¿½ï¿½ 1 È¸ï¿½ï¿½
+            Destroy(other.gameObject);  // ï¿½ï¿½ï¿½ï¿½Å©ï¿½ï¿½ ï¿½Ä±ï¿½
         }
     }
 }
