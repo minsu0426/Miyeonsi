@@ -2,15 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class FlowManager : MonoBehaviour
 {
+    public GameObject MainCanvasObject;
     public TMP_Text textBox;
     public TMP_Text nameBox;
     public Transform optionBox;
-    [HideInInspector]
     public OptinoScript[] options;
     public GameObject optionPrefab;
+
+    public Image background;
+    public Image imageLeft;
+    public Image imageMiddle;
+    public Image imageRight;
 
     public ScenarioData scenarioData;
 
@@ -55,11 +62,6 @@ public class FlowManager : MonoBehaviour
     {
         StartScenario(scenarioData);
     }
-
-    void Update()
-    {
-        
-    }
     
     IEnumerator ShowText()
     {
@@ -73,6 +75,7 @@ public class FlowManager : MonoBehaviour
             yield return new WaitForSeconds(1/scenarioData.textSpeed);
         }
         textComplete = true;
+        optionCor = StartCoroutine(ShowOptions());
     }
 
     void GenerateOptions()
@@ -87,6 +90,8 @@ public class FlowManager : MonoBehaviour
             TMP_Text optionText = optionObj.GetComponentInChildren<TMP_Text>();
             optionText.text = scenarioData.options[i].optionText;
             optionText.fontSize = scenarioData.options[i].fontSize;
+
+            optionObj.SetActive(false);
         }
     }
 
@@ -96,7 +101,7 @@ public class FlowManager : MonoBehaviour
         {
             if(scenarioData.hasOption)
             {
-                optionCor = StartCoroutine(ShowOptions());
+                //
             } else {
                 StartScenario(scenarioData.nextScenario);
             }
@@ -104,37 +109,90 @@ public class FlowManager : MonoBehaviour
             StopCoroutine(textCor);
             textBox.text = currentText;
             textComplete = true;
+            optionCor = StartCoroutine(ShowOptions());
         }
     }
 
-    public void SellectOption(OptinoScript selectedOption)
+    public void DiscardOptions()
     {
-        StopAllCoroutines();
+        StopCoroutine(optionCor);
         for (int i = 0; i < options.Length; i++)
         {
-            if(options[i] == selectedOption)
-            {
-                // pass
-            } else {
-                options[i].Discarded = true;
-                options[i].DelOption();
-            }
+            options[i].Discarded = true;
+            options[i].SkipFadeIn();
+            options[i].DelOption();
+            options[i] = null;
         }
-        StartScenario(selectedOption.scenarioData);
     }
 
-    void StartScenario(ScenarioData newScenarioData)
+    public void StartScenario(ScenarioData newScenarioData)
     {
+        if (MainCanvasObject == null)
+        {
+            MainCanvasObject = GameObject.Find("MainCanvas");
+            if (MainCanvasObject == null)
+            {
+                Debug.LogError("MainCanvas is Null");
+                return;
+            } else {
+                SetUIElement();
+            }
+        }
         scenarioData = newScenarioData;
+
+        if (scenarioData.background== null)
+        {
+            background.gameObject.SetActive(false);
+        } else {
+            background.gameObject.SetActive(true);
+            background.sprite = scenarioData.background;
+        }
+
+        if (scenarioData.imageLeft==null)
+        {
+            imageLeft.gameObject.SetActive(false);
+        } else {
+            imageLeft.gameObject.SetActive(true);
+            imageLeft.sprite = scenarioData.imageLeft;
+        }
+
+        if (scenarioData.imageMiddle == null)
+        {
+            imageMiddle.gameObject.SetActive(false);
+        } else {
+            imageMiddle.gameObject.SetActive(true);
+            imageMiddle.sprite = scenarioData.imageMiddle;
+        }
+
+        if (scenarioData.imageRight == null)
+        {
+            imageRight.gameObject.SetActive(false);
+        } else {
+            imageRight.gameObject.SetActive(true);
+            imageRight.sprite = scenarioData.imageRight;
+        }
+
         textCor = StartCoroutine(ShowText());
         GenerateOptions();
+    }
+
+    public void SetUIElement()
+    {
+        MainCanvasElementInfo info = MainCanvasObject.GetComponent<MainCanvasElementInfo>();
+        textBox = info.textBox;
+        nameBox = info.nameBox;
+        optionBox = info.optionBox;
+        background = info.background;
+        imageLeft = info.imageLeft;
+        imageMiddle = info.imageMiddle;
+        imageRight = info.imageRight;
     }
 
     IEnumerator ShowOptions()
     {
         for(int i = 0; i < options.Length; i++)
         {
-            options[i].gameObject.SetActive(true);
+            options[i].ShowOption();
             yield return new WaitForSeconds(0.5f);
         }
     }

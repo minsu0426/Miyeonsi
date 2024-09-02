@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a698fc3fa7a41143b9f8100752b8a65, type: 3}
   m_Name: EX 2
   m_EditorClassIdentifier: 
+  CharacterName: "\uD654\uC790 2"
   text: "\uB450\uBC88\uC9F8 \uC608\uC2DC \uD14D\uC2A4\uD2B8 \uC785\uB2C8\uB2E4.\n\uC120\uD0DD\uC9C0
     \uB97C \uD655\uC778\uD569\uB2C8\uB2E4."
   fontSize: 40
@@ -20,6 +21,12 @@ MonoBehaviour:
   nextScenario: {fileID: 0}
   options:
   - optionText: "\uC120\uD0DD\uC9C0 1 \uB3CC\uC544\uAC00\uAE30"
+    fontSize: 30
     optionResult: {fileID: 11400000, guid: c3d2869b11cda8a4daac7ba7e4fb9404, type: 2}
   - optionText: "\uB2E4\uC74C\uC73C\uB85C"
+    fontSize: 30
     optionResult: {fileID: 11400000, guid: a42defc3409952d46b75e05a161bdcfb, type: 2}
+  background: {fileID: 0}
+  imageLeft: {fileID: 0}
+  imageMiddle: {fileID: 0}
+  imageRight: {fileID: 0}

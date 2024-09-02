@@ -26,4 +26,11 @@ public class ScenarioData : ScriptableObject
     public bool hasOption;
     public ScenarioData nextScenario;
     public Option[] options;
+
+    [Header("이미지 설정")]
+    public Sprite background;
+    public Sprite imageLeft;
+    [Space]
+    public Sprite imageMiddle;
+    public Sprite imageRight;
 }
