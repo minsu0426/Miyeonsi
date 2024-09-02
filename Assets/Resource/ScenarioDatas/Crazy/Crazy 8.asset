@@ -10,20 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a698fc3fa7a41143b9f8100752b8a65, type: 3}
-  m_Name: 13-10
+  m_Name: Crazy 8
   m_EditorClassIdentifier: 
-  CharacterName: 
-  text: "(\uB098\uB294 \uADF8 \uB9D0\uC5D0 \uAE0D\uC815\uD558\uB4EF \uC0B4\uC9DD
-    \uC6C3\uC740 \uD6C4 \uC55E\uC5D0 \uC788\uB294 \uD2F0\uB77C\uBBF8\uC230 \uAC74\uC744
-    \uBC1C\uC0AC\uD558\uB824\uACE0 \uC870\uC900\uD588\uB2E4)\r\n\r\n"
-  fontSize: 45
-  textSpeed: 15
+  CharacterName: "\uAE40\uBBFC\uC218"
+  text: "\uADF8\uB7EC\uAC8C. \uB098 \uAD81\uAE08\uD55C\uAC8C \uC788\uB294\uB370 \uD55C\uBC88
+    \uD574\uBD10\uB3C4 \uB3FC?\r\n"
+  fontSize: 30
+  textSpeed: 10
   hasOption: 0
-  nextScenario: {fileID: 11400000, guid: bfaec43546b153c4b9c5365fabbba783, type: 2}
+  nextScenario: {fileID: 11400000, guid: ac5521787756c5349870e2c79ad0959d, type: 2}
   options: []
   changeScene: 0
   sceneName: 
-  background: {fileID: 21300000, guid: 4506c900365154a4894d00fd6290fad3, type: 3}
+  background: {fileID: 0}
   imageLeft: {fileID: 0}
   imageMiddle: {fileID: 0}
   imageRight: {fileID: 0}
