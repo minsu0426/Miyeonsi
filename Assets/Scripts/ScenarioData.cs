@@ -16,6 +16,7 @@ public class Option
 public class ScenarioData : ScriptableObject
 {
     [Header("기본 텍스트설정")]
+    public string CharacterName;
     [Multiline(3)]
     public string text;
     public float fontSize = 30;

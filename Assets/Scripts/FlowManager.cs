@@ -6,6 +6,7 @@ using UnityEngine;
 public class FlowManager : MonoBehaviour
 {
     public TMP_Text textBox;
+    public TMP_Text nameBox;
     public Transform optionBox;
     [HideInInspector]
     public OptinoScript[] options;
@@ -63,6 +64,7 @@ public class FlowManager : MonoBehaviour
     IEnumerator ShowText()
     {
         textBox.fontSize = scenarioData.fontSize;
+        nameBox.text = scenarioData.CharacterName;
         currentText = scenarioData.text;
         textComplete = false;
         for(int i = 0; i < scenarioData.text.Length; i++)
@@ -81,7 +83,7 @@ public class FlowManager : MonoBehaviour
             GameObject optionObj = Instantiate(optionPrefab, optionBox);
             options[i] = optionObj.GetComponent<OptinoScript>();
             options[i].SetSnarioData(scenarioData.options[i].optionResult);
-            
+
             TMP_Text optionText = optionObj.GetComponentInChildren<TMP_Text>();
             optionText.text = scenarioData.options[i].optionText;
             optionText.fontSize = scenarioData.options[i].fontSize;
