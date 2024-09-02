@@ -15,6 +15,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Prologue.unity
     guid: 3f55a3828ae4b474c82a62d9e31dfefc
   - enabled: 1
+    path: Assets/Scenes/GameClearScene2.unity
+    guid: c3251cd2718d08547b1b95017502fff8
+  - enabled: 1
+    path: Assets/Scenes/GameOverScene2.unity
+    guid: df26e6561f1a838448966c45add752bc
+  - enabled: 1
     path: Assets/Scenes/FirstGameScene.unity
     guid: 70605056993d2ea45b49aad64eb284df
   - enabled: 1
