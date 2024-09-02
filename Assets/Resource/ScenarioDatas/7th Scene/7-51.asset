@@ -30,5 +30,6 @@ MonoBehaviour:
   imageFront: {fileID: 0}
   soundEffect: {fileID: 0}
   SoundEffectVolume: 1
+  ChangeBackgroundMusic: 0
   backgroundMusic: {fileID: 0}
   backgroundMusicVolume: 1
