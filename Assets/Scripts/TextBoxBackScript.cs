@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
-public class mg1-2InGame : MonoBehaviour
+public class TextBoxBackScript : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -14,5 +15,10 @@ public class mg1-2InGame : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void ClickBox()
+    {
+        FlowManager.Instance.ClickBox();
     }
 }

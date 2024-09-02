@@ -7,8 +7,8 @@ using System;
 [Serializable]
 public class Option
 {
-    public TMP_Text optionTmp;
     public string optionText;
+    public float fontSize = 30;
     public ScenarioData optionResult;
 }
 
@@ -18,8 +18,8 @@ public class ScenarioData : ScriptableObject
     [Header("기본 텍스트설정")]
     [Multiline(3)]
     public string text;
-    public float fontSize;
-    public float textSpeed;
+    public float fontSize = 30;
+    public float textSpeed = 10;
 
     [Header("선택지 여부")]
     public bool hasOption;

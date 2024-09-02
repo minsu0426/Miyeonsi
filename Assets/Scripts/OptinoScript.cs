@@ -28,6 +28,7 @@ public class OptinoScript : MonoBehaviour
     {
         if (Discarded) return;
         FlowManager.Instance.SellectOption(this);
+        Destroy(gameObject);
     }
 
     public void DelOption()

@@ -40,12 +40,13 @@ public class FlowManager : MonoBehaviour
 
     void Awake()
     {
-        if (instance!= this)
+        if (instance == null)
         {
-            Destroy(gameObject);
-            return;
-        } else {
             DontDestroyOnLoad(gameObject);
+            instance = this;
+        } else {
+            if (this!= instance)
+                Destroy(gameObject);
         }
     }
 
@@ -74,17 +75,20 @@ public class FlowManager : MonoBehaviour
 
     void GenerateOptions()
     {
+        options = new OptinoScript[scenarioData.options.Length];
         for(int i = 0; i < scenarioData.options.Length; i++)
         {
             GameObject optionObj = Instantiate(optionPrefab, optionBox);
-            TMP_Text optionText = optionObj.GetComponentInChildren<TMP_Text>();
-            optionText.text = scenarioData.options[i].optionText;
             options[i] = optionObj.GetComponent<OptinoScript>();
             options[i].SetSnarioData(scenarioData.options[i].optionResult);
+            
+            TMP_Text optionText = optionObj.GetComponentInChildren<TMP_Text>();
+            optionText.text = scenarioData.options[i].optionText;
+            optionText.fontSize = scenarioData.options[i].fontSize;
         }
     }
 
-    void ClickBox()
+    public void ClickBox()
     {
         if(textComplete)
         {
@@ -103,12 +107,14 @@ public class FlowManager : MonoBehaviour
 
     public void SellectOption(OptinoScript selectedOption)
     {
+        StopAllCoroutines();
         for (int i = 0; i < options.Length; i++)
         {
             if(options[i] == selectedOption)
             {
                 // pass
             } else {
+                options[i].Discarded = true;
                 options[i].DelOption();
             }
         }
