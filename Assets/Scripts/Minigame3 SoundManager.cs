@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Maingame3SoundManager : MonoBehaviour
+public class Minigame3SoundManager : MonoBehaviour
 {
     public Button[] buttons;
     public AudioSource audioSource;
