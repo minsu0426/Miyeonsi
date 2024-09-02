@@ -29,8 +29,8 @@ public class QuizManager : MonoBehaviour
         // 질문 리스트를 초기화하고 질문을 추가합니다.
         questions = new List<Question>
         {
-            new Question { questionText = "how old me", correctAnswer = "21" },
-            new Question { questionText = "T1", correctAnswer = "1557" }
+            new Question { questionText = "한글", correctAnswer = "god" },
+            new Question { questionText = "1+2", correctAnswer = "3" }
         };
         opendoor.SetActive(false);
         // 첫 번째 질문을 표시
