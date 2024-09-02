@@ -15,17 +15,20 @@ public class Bullet : MonoBehaviour
         Vector2 randomDirection = Random.insideUnitCircle.normalized;
         rb.velocity = randomDirection * speed;
     }
-    void OnTriggerEnter2D(Collider2D other)
+
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (other.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
+            // 플레이어의 체력을 감소시킵니다.
+            PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
             if (playerHealth != null)
             {
-                playerHealth.TakeDamage(1);
+                playerHealth.TakeDamage(1);  // 체력을 1 감소시킵니다.
             }
+
+         
         }
     }
 
-    
 }
