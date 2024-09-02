@@ -28,7 +28,7 @@ public class FlowManager : MonoBehaviour
     Coroutine optionCor;
 
     private string currentText;
-    private bool textComplete = false;
+    [SerializeField]private bool textComplete = false;
     private bool isinMainFlow = true;
 
     private string replaceName = "$player";
@@ -136,7 +136,7 @@ public class FlowManager : MonoBehaviour
 
             if(scenarioData.hasOption)
             {
-                //
+                textComplete = true;
             } else {
                 EndCurrentScenario(scenarioData.nextScenario);
             }
