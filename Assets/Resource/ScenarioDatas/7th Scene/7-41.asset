@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CharacterName: "\uAE40\uBBFC\uC218"
   text: "\uC6B0\uC120 \uB2E4\uB978 \uBC29\uC548\uC5D0 \uAC00\uB46C\uB1A8\uC5B4. \uD558\uC9C0\uB9CC
-    \uC624\uB798 \uBC84\uD2F0\uC9C0\uB294 \uBABB\uD560\uAEBC\uC57C"
+    \uC624\uB798 \uBC84\uD2F0\uC9C0\uB294 \uBABB\uD560\uAEBC\uC57C.."
   fontSize: 45
   textSpeed: 15
   hasOption: 0

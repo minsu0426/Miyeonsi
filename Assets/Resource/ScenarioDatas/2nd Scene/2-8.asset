@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 2-8
   m_EditorClassIdentifier: 
   CharacterName: "\uAE40\uBBFC\uC218"
-  text: "\uBC84\uB824. \uC544\uB2C8\uBA74 \uB0B4\uAC00 \uC8FD\uC77C\uAEBC\uC57C.
+  text: "\uBC84\uB824. \uC544\uB2C8\uBA74 \uB0B4\uAC00 \uC8FD\uC77C\uAC70\uC57C.
     \uACB0\uC815\uD574.\r\n"
   fontSize: 45
   textSpeed: 15

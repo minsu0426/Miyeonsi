@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 6-10
   m_EditorClassIdentifier: 
   CharacterName: 
-  text: "\uC21C\uAC04 \uC704\uC5D0\uC11C \uCCA0\uCC3D\uC774 \uB5A8\uC5B4\uC84C\uB2E4"
+  text: "(\uC21C\uAC04 \uC704\uC5D0\uC11C \uCCA0\uCC3D\uC774 \uB5A8\uC5B4\uC84C\uB2E4.)"
   fontSize: 45
   textSpeed: 15
   hasOption: 0
@@ -25,5 +25,6 @@ MonoBehaviour:
   imageLeft: {fileID: 0}
   imageMiddle: {fileID: 0}
   imageRight: {fileID: 0}
+  imageFront: {fileID: 0}
   audioClip: {fileID: 0}
   audioVolume: 1

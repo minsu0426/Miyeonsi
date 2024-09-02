@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: 5-10
   m_EditorClassIdentifier: 
   CharacterName: 
-  text: "\uC774 \uAD11\uACBD\uC744 \uBCF4\uB358 \uBBFC\uC218\uB294 \uD600\uB97C \uCC28\uB354\uB2C8,\n\uD604\uC131\uC774\uC640
-    \uB098\uC758 \uC0AC\uC774\uB97C \uC9C0\uB098\uAC00\uBA70 \uC55E\uC73C\uB85C \uB098\uC544\uAC14\uB2E4"
+  text: "(\uC774 \uAD11\uACBD\uC744 \uBCF4\uB358 \uBBFC\uC218\uB294 \uD600\uB97C
+    \uCC28\uB354\uB2C8,\n\uD604\uC131\uC774\uC640 \uB098\uC758 \uC0AC\uC774\uB97C
+    \uC9C0\uB098\uAC00\uBA70 \uC55E\uC73C\uB85C \uB098\uC544\uAC14\uB2E4.)"
   fontSize: 45
   textSpeed: 15
   hasOption: 0
@@ -26,5 +27,6 @@ MonoBehaviour:
   imageLeft: {fileID: 0}
   imageMiddle: {fileID: 0}
   imageRight: {fileID: 0}
+  imageFront: {fileID: 0}
   audioClip: {fileID: 0}
   audioVolume: 1

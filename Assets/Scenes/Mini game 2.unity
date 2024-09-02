@@ -2177,7 +2177,7 @@ MonoBehaviour:
   - {fileID: 1230517322}
   - {fileID: 512575509}
   - {fileID: 1027339684}
-  timeLimit: 5
+  timeLimit: 30
   timerText: {fileID: 521937345}
 --- !u!95 &1368144067
 Animator:
