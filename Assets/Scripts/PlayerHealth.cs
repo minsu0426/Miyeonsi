@@ -88,7 +88,7 @@ public class PlayerHealth : MonoBehaviour
         gameCleared = true;
         Debug.Log("Game Cleared!");
         // ���� Ŭ���� ó�� ���� (��: Ŭ���� ������ ��ȯ)
-        SceneManager.LoadScene(FlowManager.Instance.mainGameSceneName);
+        FlowManager.Instance.ReturnToMainFlow();
 
     }
 
