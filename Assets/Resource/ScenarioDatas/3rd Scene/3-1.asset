@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a698fc3fa7a41143b9f8100752b8a65, type: 3}
-  m_Name: 2-26
+  m_Name: 3-1
   m_EditorClassIdentifier: 
-  CharacterName: "\uC8FC\uD604\uC131"
-  text: "\uBC8C\uB8EC \uCEF4\uD37C\uB2C8"
+  CharacterName: "\uAE40\uBBFC\uC218"
+  text: "\uC774\uAC74 \uBBF8\uCE5C\uC9D3\uC774\uC57C. \uADF8 \u201C\uBC8C\uB8EC \uCEF4\uD37C\uB2C8\u201D
+    \uB77C\uACE0"
   fontSize: 45
   textSpeed: 15
   hasOption: 0
-  nextScenario: {fileID: 11400000, guid: 2e651c6d6b207284b8286204ca5080c1, type: 2}
+  nextScenario: {fileID: 11400000, guid: 5bfb374fed8f06e49b27bc807bb94d47, type: 2}
   options: []
   changeScene: 0
   sceneName: 
