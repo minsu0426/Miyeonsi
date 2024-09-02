@@ -2,6 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
+
+[Serializable]
+public class Option
+{
+    public TMP_Text optionTmp;
+    public string optionText;
+    public ScenarioData optionResult;
+}
 
 [CreateAssetMenu(fileName = "NewScenarioData", menuName = "ScenarioData", order = 51)]
 public class ScenarioData : ScriptableObject
@@ -14,19 +23,6 @@ public class ScenarioData : ScriptableObject
 
     [Header("선택지 여부")]
     public bool hasOption;
-    public TMP_Text[] optionTmp;
-    public string[] optionText;
-    public ScenarioData[] optionResult;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public ScenarioData nextScenario;
+    public Option[] options;
 }
