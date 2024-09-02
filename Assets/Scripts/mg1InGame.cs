@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
 
 public class mg1InGame : MonoBehaviour
 {
@@ -12,13 +13,13 @@ public class mg1InGame : MonoBehaviour
     public int myNum2;
     public GameObject door;
     public TextMeshProUGUI numTxt;
-    
+    public GameObject kwang;
     void Start()
     {
         Debug.Log("HelloWorld!!");
-        myNum2 = 20;
+        myNum2 = 15;
         numTxt.text = "0";
-        
+        kwang.SetActive(false);
     }
 
     // Update is called once per frame
@@ -34,10 +35,14 @@ public class mg1InGame : MonoBehaviour
         numTxt.text = myNum.ToString();
         
 
-        if (myNum == myNum2)
+        if (myNum >= myNum2)
         {
-            //다음씬으로 전환
+            kwang.SetActive(true);
         }
-        
+        if (myNum == 30)
+        {
+            //다음씬으로.
+        }
+
     }
 }
