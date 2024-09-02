@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ExitButton : MonoBehaviour
 {
-    public void OnPressButton()
+    public void OnExitPressButton()
     {
         if (Application.isPlaying)
         {
