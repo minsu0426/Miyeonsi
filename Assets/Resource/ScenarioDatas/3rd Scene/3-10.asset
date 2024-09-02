@@ -23,7 +23,7 @@ MonoBehaviour:
   sceneName: 
   background: {fileID: 21300000, guid: 2f90dab9ef8cbbe49bef9c371e31ed39, type: 3}
   imageLeft: {fileID: 0}
-  imageMiddle: {fileID: 0}
+  imageMiddle: {fileID: 21300000, guid: 2d50adbd5745f5a458ed187912976ed6, type: 3}
   imageRight: {fileID: 0}
   imageFront: {fileID: 0}
   audioClip: {fileID: 0}
