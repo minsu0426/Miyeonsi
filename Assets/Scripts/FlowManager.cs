@@ -65,7 +65,7 @@ public class FlowManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
             instance = this;
         } else {
-            if (this!= instance)
+            if (instance != this)
                 Destroy(gameObject);
         }
 
