@@ -28,7 +28,7 @@ public class BombDefuse : MonoBehaviour
 
     void Start()
     {
-        timeRemaining = 16f;
+        timeRemaining = 31f;
         UpdateTimerText();
         Sequence_Rage = 7;
         correctSequence = new int[Sequence_Rage];
@@ -85,6 +85,7 @@ public class BombDefuse : MonoBehaviour
             else
             {
                 StartCoroutine(BlinkLamp(redLamp));
+                currentStep = 0;
             }
         }
         else
