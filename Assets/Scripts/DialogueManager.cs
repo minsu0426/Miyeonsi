@@ -10,12 +10,14 @@ public class DialogueManager : MonoBehaviour
     public float textSpeed = 0.05f;           // 한 글자씩 출력되는 시간 지연 (초 단위)
     public int currentDialogueIndex;         // 현재 대사 인덱스
 
-    public FirstScene firstScene;
+    //public FirstScene firstScene;
 
     public Image targetImage;                 // 변경할 이미지 UI 요소
     public Sprite newSprite;                  // 대사 인덱스가 특정 값일 때 표시할 새 이미지
     public int imageChangeDialogueIndex = 1;  // 이미지를 변경할 대사 인덱스
 
+    public AudioSource audioSource;
+    public AudioClip soundEffect;
     private void Start()
     {
         currentDialogueIndex = 0;              // 대사 인덱스 초기화
@@ -26,6 +28,11 @@ public class DialogueManager : MonoBehaviour
     {
         while (currentDialogueIndex < dialogues.Length)
         {
+            if (currentDialogueIndex == 0)
+            {
+                PlaySoundEffect();
+            }
+
             // 현재 대사를 표시
             yield return StartCoroutine(NormalChat(dialogues[currentDialogueIndex]));
 
@@ -68,6 +75,14 @@ public class DialogueManager : MonoBehaviour
         if (targetImage != null && newSprite != null)
         {
             targetImage.sprite = newSprite;    // 이미지를 새 이미지로 변경
+        }
+    }
+
+    private void PlaySoundEffect()
+    {
+        if (audioSource != null && soundEffect != null)
+        {
+            audioSource.PlayOneShot(soundEffect);  // 효과음 재생
         }
     }
 }
