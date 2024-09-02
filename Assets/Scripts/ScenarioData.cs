@@ -37,4 +37,8 @@ public class ScenarioData : ScriptableObject
     [Space]
     public Sprite imageMiddle;
     public Sprite imageRight;
+
+    [Header("음향 설정")]
+    public AudioClip audioClip;
+    public float audioVolume = 1;
 }

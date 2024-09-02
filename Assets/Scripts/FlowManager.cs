@@ -174,7 +174,12 @@ public class FlowManager : MonoBehaviour
         }
         scenarioData = newScenarioData;
 
-        if (scenarioData.background== null)
+        if (AudioController.instance != null)
+        {
+            AudioController.instance.PlayAudio(scenarioData.audioClip, scenarioData.audioVolume);
+        }
+
+        if (scenarioData.background == null)
         {
             background.gameObject.SetActive(false);
         } else {
