@@ -44,4 +44,5 @@ public class mg1InGame : MonoBehaviour
         }
 
     }
+
 }
