@@ -19,7 +19,12 @@ MonoBehaviour:
   hasOption: 0
   nextScenario: {fileID: 11400000, guid: 90e0be74a870ad440ae8bac5651a90b7, type: 2}
   options: []
+  changeScene: 0
+  sceneName: 
   background: {fileID: 0}
   imageLeft: {fileID: 0}
   imageMiddle: {fileID: 0}
   imageRight: {fileID: 0}
+  imageFront: {fileID: 0}
+  audioClip: {fileID: 0}
+  audioVolume: 1

@@ -34,9 +34,9 @@ public class ScenarioData : ScriptableObject
     [Header("이미지 설정")]
     public Sprite background;
     public Sprite imageLeft;
-    [Space]
     public Sprite imageMiddle;
     public Sprite imageRight;
+    public Sprite imageFront;
 
     [Header("음향 설정")]
     public AudioClip audioClip;

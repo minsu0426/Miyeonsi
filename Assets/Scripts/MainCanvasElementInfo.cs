@@ -13,6 +13,7 @@ public class MainCanvasElementInfo : MonoBehaviour
     public Image imageLeft;
     public Image imageMiddle;
     public Image imageRight;
+    public Image imageFront;
     // Start is called before the first frame update
     void Start()
     {

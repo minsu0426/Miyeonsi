@@ -18,6 +18,7 @@ public class FlowManager : MonoBehaviour
     public Image imageLeft;
     public Image imageMiddle;
     public Image imageRight;
+    public Image imageFront;
 
     public ScenarioData scenarioData;
 
@@ -161,7 +162,7 @@ public class FlowManager : MonoBehaviour
         if (scenarioData.changeScene && isinMainFlow)
         {
             isinMainFlow = false;
-            SceneManager.LoadScene(newScenarioData.sceneName);
+            SceneManager.LoadScene(scenarioData.sceneName);
             return;
         }
         isinMainFlow = true;
@@ -218,6 +219,15 @@ public class FlowManager : MonoBehaviour
             imageRight.sprite = scenarioData.imageRight;
         }
 
+        if (scenarioData.imageFront == null)
+        {
+            imageFront.gameObject.SetActive(false);
+        } else {
+            imageFront.gameObject.SetActive(true);
+            imageFront.sprite = scenarioData.imageFront;
+            UIFade temp = imageFront.GetComponent<UIFade>();
+            temp.FadeInCor = StartCoroutine(temp.FadeIn(0.5f));
+        }
         textCor = StartCoroutine(ShowText());
         GenerateOptions();
     }
@@ -232,6 +242,7 @@ public class FlowManager : MonoBehaviour
         imageLeft = info.imageLeft;
         imageMiddle = info.imageMiddle;
         imageRight = info.imageRight;
+        imageFront = info.imageFront;
     }
 
     IEnumerator ShowOptions()
