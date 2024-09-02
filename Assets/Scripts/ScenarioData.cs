@@ -39,8 +39,8 @@ public class ScenarioData : ScriptableObject
     public Sprite imageFront;
 
     [Header("효과음 설정")]
-    public AudioClip audioClip;
-    public float audioVolume = 1;
+    public AudioClip soundEffect;
+    public float SoundEffectVolume = 1;
 
     [Header("배경음 설정")]
     public AudioClip backgroundMusic;
