@@ -12,12 +12,13 @@ public class mg1InGame : MonoBehaviour
     public int myNum2;
     public GameObject door;
     public TextMeshProUGUI numTxt;
-
+    
     void Start()
     {
         Debug.Log("HelloWorld!!");
         myNum2 = 20;
         numTxt.text = "0";
+        
     }
 
     // Update is called once per frame
@@ -27,12 +28,13 @@ public class mg1InGame : MonoBehaviour
     }
     public void Click()
     {
-        Debug.Log("Äç");
+        Debug.Log("Click!!");
         myNum++;
         Debug.Log("myNum: " + myNum);
         numTxt.text = myNum.ToString();
+        
 
-        if(myNum == myNum2)
+        if (myNum == myNum2)
         {
             //´ÙÀ½¾ÀÀ¸·Î ÀüÈ¯
         }
