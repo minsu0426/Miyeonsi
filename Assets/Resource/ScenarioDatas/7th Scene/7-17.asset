@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 7-17
   m_EditorClassIdentifier: 
   CharacterName: "\uC8FC\uD604\uC131"
-  text: "\u2026\uC794\uB9D0\uB9D0\uACE0 \uC606\uD600. \uC544\uAE4C\uC804\uC5D0 \uBCF4\uB2C8\uAE4C
+  text: "\u2026\uC794\uB9D0\uB9D0\uACE0 \uC5CE\uD600. \uC544\uAE4C\uC804\uC5D0 \uBCF4\uB2C8\uAE4C
     \uC798 \uAC77\uC9C0\uB3C4 \uBABB\uD558\uB358\uB370\u2026"
   fontSize: 45
   textSpeed: 15
