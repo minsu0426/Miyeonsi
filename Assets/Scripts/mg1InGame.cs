@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 public class mg1InGame : MonoBehaviour
 {
@@ -38,9 +39,6 @@ public class mg1InGame : MonoBehaviour
         if (myNum == myNum2)
         {
             kwang.SetActive(true);
-            //¥Ÿ¿Ωæ¿¿∏∑Œ
         }
-       
-
     }
 }

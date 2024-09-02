@@ -32,6 +32,8 @@ public class FlowManager : MonoBehaviour
     private string replaceName = "$player";
     public string playerName = "main";
 
+    public string mainGameSceneName = "FirstGameScene";
+
     //singleton pattern
     private static FlowManager instance;
     public static FlowManager Instance
