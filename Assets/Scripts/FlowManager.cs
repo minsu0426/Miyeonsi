@@ -37,21 +37,25 @@ public class FlowManager : MonoBehaviour
     public string mainGameSceneName = "FirstGameScene";
 
     //singleton pattern
+    private static readonly object _lock = new object();
     private static FlowManager instance;
     public static FlowManager Instance
     {
         get
         {
-            if (instance == null)
+            lock (_lock)
             {
-                instance = FindObjectOfType<FlowManager>();
                 if (instance == null)
                 {
-                    GameObject obj = new GameObject("FlowManager");
-                    instance = obj.AddComponent<FlowManager>();
+                    instance = FindObjectOfType<FlowManager>();
+                    if (instance == null)
+                    {
+                        GameObject obj = new GameObject("FlowManager");
+                        instance = obj.AddComponent<FlowManager>();
+                    }
                 }
+                return instance;
             }
-            return instance;
         }
     }
 
@@ -64,14 +68,21 @@ public class FlowManager : MonoBehaviour
     {
         if (instance == null)
         {
-            DontDestroyOnLoad(gameObject);
             instance = this;
-        } else {
-            if (instance != this)
-                Destroy(gameObject);
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+            return; // 기존 인스턴스가 있는 경우, 아래 코드를 실행하지 않도록 합니다.
         }
 
         SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -180,7 +191,26 @@ public class FlowManager : MonoBehaviour
     {
         isinMainFlow = true;
 
-        if (newScenarioData == null) return;
+        if (newScenarioData == null) 
+        {
+            Debug.LogError("newScenarioData is Null");
+            return;
+        }
+
+        scenarioData = newScenarioData;
+
+        SetUIandAudio();
+
+        textCor = StartCoroutine(ShowText());
+        GenerateOptions();
+    }
+
+    public void SetUIandAudio()
+    {
+        if (AudioController.instance != null)
+        {
+            AudioController.instance.PlayAudio(scenarioData.audioClip, scenarioData.audioVolume);
+        }
 
         if (MainCanvasObject == null)
         {
@@ -192,12 +222,6 @@ public class FlowManager : MonoBehaviour
             } else {
                 SetUIElement();
             }
-        }
-        scenarioData = newScenarioData;
-
-        if (AudioController.instance != null)
-        {
-            AudioController.instance.PlayAudio(scenarioData.audioClip, scenarioData.audioVolume);
         }
 
         if (scenarioData.background == null)
@@ -241,8 +265,6 @@ public class FlowManager : MonoBehaviour
             UIFade temp = imageFront.GetComponent<UIFade>();
             temp.FadeInCor = StartCoroutine(temp.FadeIn(0.5f));
         }
-        textCor = StartCoroutine(ShowText());
-        GenerateOptions();
     }
 
     public void SetUIElement()
