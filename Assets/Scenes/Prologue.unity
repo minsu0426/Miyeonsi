@@ -845,6 +845,7 @@ MonoBehaviour:
   imageMiddle: {fileID: 0}
   imageRight: {fileID: 0}
   imageFront: {fileID: 0}
+  BlinderPrefab: {fileID: 4422060328470265770, guid: 272540cd5aa147f46a0c58fa6cf174b2, type: 3}
   scenarioData: {fileID: 11400000, guid: c6d05b1a4c1b58d4fb7063a4450ea20d, type: 2}
   playerName: main
   mainGameSceneName: FirstGameScene
