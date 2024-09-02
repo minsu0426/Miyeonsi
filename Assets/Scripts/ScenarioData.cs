@@ -9,6 +9,7 @@ public class ScenarioData : ScriptableObject
     [Header("기본 텍스트설정")]
     [Multiline(3)]
     public string text;
+    public float fontSize;
     public float textSpeed;
 
     [Header("선택지 여부")]
