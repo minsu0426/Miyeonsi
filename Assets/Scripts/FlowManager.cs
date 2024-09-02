@@ -207,9 +207,9 @@ public class FlowManager : MonoBehaviour
 
     public void SetUIandAudio()
     {
-        if (AudioController.instance != null)
+        if (AudioController.instance != null && scenarioData.soundEffect != null)
         {
-            AudioController.instance.PlayAudio(scenarioData.audioClip, scenarioData.audioVolume);
+            AudioController.instance.PlayAudio(scenarioData.soundEffect, scenarioData.SoundEffectVolume);
         }
 
         if (scenarioData.background != null)
