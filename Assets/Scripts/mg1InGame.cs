@@ -11,7 +11,6 @@ public class mg1InGame : MonoBehaviour
 {
     // Start is called before the first frame update
     int myNum;
-    int myNum3;
     public int myNum2;
     public GameObject door;
     public TextMeshProUGUI numTxt;
@@ -32,7 +31,6 @@ public class mg1InGame : MonoBehaviour
     {
         Debug.Log("Click!!");
         myNum++;
-        myNum3++;
 
         if (myNum >= myNum2)
         {
@@ -40,7 +38,7 @@ public class mg1InGame : MonoBehaviour
             door.SetActive(false);
         }
 
-        if (myNum3 >= 50)
+        if (myNum >= 50)
         {
             SceneManager.LoadScene(FlowManager.Instance.mainGameSceneName);
         }
