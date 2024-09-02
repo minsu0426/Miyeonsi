@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CharacterName: 
   text: "\uADF8\uB9AC\uACE0 \uBAA8\uB4E0 \uAC83\uC744 \uD2F0\uB77C\uBBF8\uC218\uB85C
-    \uBC14\uAFC0 \uC218 \uC788\uB294 \uD2F0\uB77C\uBBF8\uC230 \uAC74\uC73C\uB85C\r\n"
+    \uBC14\uAFC0 \uC218 \uC788\uB294 \uD2F0\uB77C\uBBF8\uC219 \uAC74\uC73C\uB85C\r\n"
   fontSize: 45
   textSpeed: 15
   hasOption: 0
@@ -27,5 +27,9 @@ MonoBehaviour:
   imageMiddle: {fileID: 0}
   imageRight: {fileID: 0}
   imageFront: {fileID: 0}
-  audioClip: {fileID: 0}
-  audioVolume: 1
+  fadeOut: 0
+  soundEffect: {fileID: 0}
+  SoundEffectVolume: 1
+  ChangeBackgroundMusic: 0
+  backgroundMusic: {fileID: 0}
+  backgroundMusicVolume: 1

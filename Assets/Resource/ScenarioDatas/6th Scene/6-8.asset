@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 6-8
   m_EditorClassIdentifier: 
   CharacterName: 
-  text: "//(\uC090\uC774\uC789\u313A \uACBD\uACE0\uC74C \uC18C\uB9AC \uD6A8\uACFC\uC74C)\r\n"
+  text: "(\uC0AC\uC774\uB80C \uC18C\uB9AC)"
   fontSize: 45
   textSpeed: 15
   hasOption: 0
@@ -26,6 +26,7 @@ MonoBehaviour:
   imageMiddle: {fileID: 0}
   imageRight: {fileID: 0}
   imageFront: {fileID: 0}
+  fadeOut: 0
   soundEffect: {fileID: 8300000, guid: ccf362443ab5a7147af4266bd91f55b2, type: 3}
   SoundEffectVolume: 1
   ChangeBackgroundMusic: 0

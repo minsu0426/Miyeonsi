@@ -2741,9 +2741,9 @@ MonoBehaviour:
   - {fileID: 88782941}
   - {fileID: 1543084791}
   blinkColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blinkDuration: 0.2
+  blinkDuration: 0.18
   delayBetweenBlinks: 0.1
-  startDelay: 5
+  startDelay: 3
   redLamp: {fileID: 1695676585}
   greenLamp: {fileID: 1075149038}
   success: {fileID: 11400000, guid: 336c40daa90d4284eab62caa11849260, type: 2}

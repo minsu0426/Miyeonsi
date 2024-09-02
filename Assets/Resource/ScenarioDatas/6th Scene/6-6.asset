@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 6-6
   m_EditorClassIdentifier: 
   CharacterName: 
-  text: "//\uBB34\uC5B8\uAC00 \uAC78\uB9AC\uB294 \uC18C\uB9AC"
+  text: "(\uBB34\uC5B8\uAC00 \uAC78\uB9AC\uB294 \uC18C\uB9AC)"
   fontSize: 45
   textSpeed: 15
   hasOption: 0
@@ -26,6 +26,7 @@ MonoBehaviour:
   imageMiddle: {fileID: 0}
   imageRight: {fileID: 0}
   imageFront: {fileID: 0}
+  fadeOut: 0
   soundEffect: {fileID: 8300000, guid: 1dfc06ac16055e64e8f25cc5bbde157e, type: 3}
   SoundEffectVolume: 1
   ChangeBackgroundMusic: 0

@@ -18,7 +18,7 @@ MonoBehaviour:
   fontSize: 45
   textSpeed: 15
   hasOption: 0
-  nextScenario: {fileID: 0}
+  nextScenario: {fileID: 11400000, guid: e72e543aecb0b9e4eb486640096bc5b3, type: 2}
   options: []
   changeScene: 0
   sceneName: 
@@ -27,6 +27,7 @@ MonoBehaviour:
   imageMiddle: {fileID: 21300000, guid: fd5c53465e8187344a68b5b18161ca20, type: 3}
   imageRight: {fileID: 0}
   imageFront: {fileID: 0}
+  fadeOut: 0
   soundEffect: {fileID: 0}
   SoundEffectVolume: 1
   ChangeBackgroundMusic: 0
