@@ -17,7 +17,7 @@ public class mg1InGame : MonoBehaviour
     void Start()
     {
         Debug.Log("HelloWorld!!");
-        myNum2 = 15;
+        myNum2 = 30;
         numTxt.text = "0";
         kwang.SetActive(false);
     }
@@ -39,9 +39,9 @@ public class mg1InGame : MonoBehaviour
         {
             kwang.SetActive(true);
         }
-        if (myNum == 30)
+        if (myNum == 50)
         {
-            //¥Ÿ¿Ωæ¿¿∏∑Œ.
+            //nextscene
         }
 
     }

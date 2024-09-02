@@ -1317,7 +1317,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 64
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 6
     m_MaxSize: 64
@@ -2346,8 +2346,9 @@ MonoBehaviour:
   - {fileID: 88782941}
   - {fileID: 1543084791}
   blinkColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  blinkDuration: 0.5
-  delayBetweenBlinks: 0.5
+  blinkDuration: 0.2
+  delayBetweenBlinks: 0.1
+  startDelay: 0.2
 --- !u!1 &1539479137
 GameObject:
   m_ObjectHideFlags: 0
