@@ -3317,7 +3317,7 @@ MonoBehaviour:
   - {fileID: 392601763}
   - {fileID: 88782941}
   - {fileID: 1543084791}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1562275385}
 --- !u!82 &1562275385
 AudioSource:
   m_ObjectHideFlags: 0

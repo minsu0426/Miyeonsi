@@ -2,36 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BackgroundMusicManager : MonoBehaviour
+public class RunAudio : MonoBehaviour
 {
-    private AudioSource audioSource;
+    public AudioSource audioSource;
+    public static RunAudio instance;
+
+    void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
-        // AudioSource ÄÄÆ÷³ÍÆ® Ãß°¡ ¹× ±âº» ¼³Á¤
-        audioSource = gameObject.AddComponent<AudioSource>();
-        audioSource.loop = true; // ¹Ýº¹ Àç»ý ¼³Á¤
-        audioSource.playOnAwake = false; // °ÔÀÓ ½ÃÀÛ ½Ã ÀÚµ¿ Àç»ýµÇÁö ¾Êµµ·Ï ¼³Á¤
+        audioSource.loop = true; // ï¿½Ýºï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        audioSource.playOnAwake = false; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Êµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     }
 
-    // ¹è°æÀ½¾ÇÀ» Àç»ýÇÏ´Â ¸Þ¼­µå
-    public void PlayBackgroundMusic(AudioClip clip)
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½
+    public void PlayBackgroundMusic(AudioClip clip, float volume)
     {
         if (audioSource.isPlaying)
         {
-            audioSource.Stop(); // ±âÁ¸¿¡ Àç»ý ÁßÀÎ À½¾ÇÀÌ ÀÖ´Ù¸é ÁßÁö
+            audioSource.Stop(); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½
         }
 
-        audioSource.clip = clip; // »õ·Î¿î ¿Àµð¿À Å¬¸³ ÇÒ´ç
-        audioSource.Play(); // À½¾Ç Àç»ý
+        audioSource.clip = clip; // ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ ï¿½Ò´ï¿½
+        audioSource.volume = volume; // ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+        audioSource.Play(); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
     }
 
-    // ¹è°æÀ½¾ÇÀ» ÁßÁöÇÏ´Â ¸Þ¼­µå
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½
     public void StopBackgroundMusic()
     {
         if (audioSource.isPlaying)
         {
-            audioSource.Stop(); // ÇöÀç Àç»ý ÁßÀÎ À½¾ÇÀ» ÁßÁö
+            audioSource.Stop(); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         }
     }
 }
