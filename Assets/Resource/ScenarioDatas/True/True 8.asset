@@ -17,7 +17,7 @@ MonoBehaviour:
   fontSize: 45
   textSpeed: 15
   hasOption: 0
-  nextScenario: {fileID: 11400000, guid: dc8e0812b17f57d4f99ceeda14bb7cf5, type: 2}
+  nextScenario: {fileID: 11400000, guid: c1a3d5e18257cf3468e190bb8aa96ef4, type: 2}
   options: []
   changeScene: 0
   sceneName: 
