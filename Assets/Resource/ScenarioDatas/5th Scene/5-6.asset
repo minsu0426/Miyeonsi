@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 5-6
   m_EditorClassIdentifier: 
   CharacterName: $player
-  text: "\uB108\uAC00 \uC5C6\uC5C8\uC73C\uBA74 \uC6B0\uB9B0 \uC774\uBBF8 \uC8FD\uC5C8\uC744\uAEBC\uC57C"
+  text: "\uB108\uAC00 \uC5C6\uC5C8\uC73C\uBA74 \uC6B0\uB9B0 \uC774\uBBF8 \uC8FD\uC5C8\uC744\uAEBC\uC57C..."
   fontSize: 45
   textSpeed: 15
   hasOption: 0
@@ -25,5 +25,6 @@ MonoBehaviour:
   imageLeft: {fileID: 0}
   imageMiddle: {fileID: 0}
   imageRight: {fileID: 0}
+  imageFront: {fileID: 0}
   audioClip: {fileID: 0}
   audioVolume: 1

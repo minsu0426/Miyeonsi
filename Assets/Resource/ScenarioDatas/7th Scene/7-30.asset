@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 7-30
   m_EditorClassIdentifier: 
   CharacterName: 
-  text: "\uAD34\uBB3C\uC778\uAC00\u2026?\r\n"
+  text: "(\uAD34\uBB3C\uC778\uAC00\u2026?)\r\n"
   fontSize: 45
   textSpeed: 15
   hasOption: 0

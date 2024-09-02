@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 8-7
   m_EditorClassIdentifier: 
   CharacterName: 
-  text: "\uADF8\uB54C"
+  text: "\uADF8\uB54C.."
   fontSize: 45
   textSpeed: 15
   hasOption: 0

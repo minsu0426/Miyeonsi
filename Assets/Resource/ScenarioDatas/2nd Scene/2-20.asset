@@ -15,7 +15,7 @@ MonoBehaviour:
   CharacterName: $player
   text: "\uBB50? \uD2F0\uB77C\uBBF8\uC218 \uCF00\uC78C??\n\uACE0\uC5F4\uB7C9 \uB369\uC5B4\uB9AC\uC796\uC544!!
     \uADF8\uAC83\uB9CC \uC788\uC73C\uBA74 \uC778\uB958\uC758 \uC2DD\uB7C9\uB09C\uC740
-    \uD574\uACB0\uB420\uAEBC\uC57C\r\n\r\n"
+    \uD574\uACB0\uB420\uAEBC\uC57C!\r\n\r\n"
   fontSize: 45
   textSpeed: 15
   hasOption: 0

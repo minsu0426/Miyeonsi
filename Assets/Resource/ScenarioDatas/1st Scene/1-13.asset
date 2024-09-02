@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 1-13
   m_EditorClassIdentifier: 
   CharacterName: $player
-  text: "(\uC544\uB9C8 \uC2DD\uB7C9 \uC598\uAE30\uACA0\uC9C0. \uC800\uB807\uAC8C
-    \uBB34\uAC8C\uC7A1\uB294\uAC78 \uBCF4\uBA74)\r\n"
+  text: "(\uC544\uB9C8 \uC2DD\uB7C9 \uC598\uAE30\uACA0\uC9C0...\uC800\uB807\uAC8C
+    \uBB34\uAC8C\uC7A1\uB294\uAC78 \uBCF4\uBA74.)\r\n"
   fontSize: 45
   textSpeed: 15
   hasOption: 0

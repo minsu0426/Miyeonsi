@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 1-11
   m_EditorClassIdentifier: 
   CharacterName: $player
-  text: "(\uD734)"
+  text: "(\uD734...)"
   fontSize: 45
   textSpeed: 15
   hasOption: 0

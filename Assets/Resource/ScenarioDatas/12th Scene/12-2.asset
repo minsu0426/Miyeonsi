@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 12-2
   m_EditorClassIdentifier: 
   CharacterName: 
-  text: "\uC2DC\uB044\uB7FD\uB358 \uACBD\uACE0\uC74C\uC774 \uC774\uB0B4 \uBA48\uCDC4\uB2E4.\r\n"
+  text: "(\uC2DC\uB044\uB7FD\uB358 \uACBD\uACE0\uC74C\uC774 \uC774\uB0B4 \uBA48\uCDC4\uB2E4.)\r\n"
   fontSize: 45
   textSpeed: 15
   hasOption: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 2-5
   m_EditorClassIdentifier: 
   CharacterName: $player
-  text: "\uBB50? \uADF8\uB7F4\uC218\uB294 \uC5C6\uC5B4\r\n"
+  text: "\uBB50? \uADF8\uB7F4\uC218\uB294 \uC5C6\uC5B4..\r\n"
   fontSize: 45
   textSpeed: 15
   hasOption: 0

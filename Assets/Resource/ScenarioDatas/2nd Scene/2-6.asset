@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CharacterName: $player
   text: "\uC6B0\uB9AC\uAC00 \uC544\uB2C8\uBA74 \uC800 \uC544\uC774\uB4E4\uC740 \uC8FD\uACE0
-    \uB9D0\uAEBC\uC57C"
+    \uB9D0\uAEBC\uC57C.."
   fontSize: 45
   textSpeed: 15
   hasOption: 0

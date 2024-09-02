@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 5-5
   m_EditorClassIdentifier: 
   CharacterName: $player
-  text: "\uD604\uC131\uC544 \uC9C4\uC9DC \uCD5C\uACE0\uC57C"
+  text: "\uD604\uC131\uC544 \uC9C4\uC9DC \uCD5C\uACE0\uC57C..!"
   fontSize: 45
   textSpeed: 15
   hasOption: 0
@@ -25,5 +25,6 @@ MonoBehaviour:
   imageLeft: {fileID: 0}
   imageMiddle: {fileID: 0}
   imageRight: {fileID: 0}
+  imageFront: {fileID: 0}
   audioClip: {fileID: 0}
   audioVolume: 1

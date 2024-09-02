@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: 6-22
   m_EditorClassIdentifier: 
   CharacterName: $player
-  text: "\uC800\uAC74\u2026balloon company\uC758 \uCD5C\uC885\uBCD1\uAE30... \uC624\uBB3CThe\uD48D\uC120.mk2\u2026?!"
+  text: "\uC800\uAC74\u2026\"Balloon Company\"\uC758 \uCD5C\uC885\uBCD1\uAE30...
+    \uC624\uBB3CThe\uD48D\uC120.mk2\u2026?!"
   fontSize: 45
   textSpeed: 15
   hasOption: 0

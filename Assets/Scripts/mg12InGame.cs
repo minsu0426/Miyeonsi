@@ -30,8 +30,8 @@ public class QuizManager : MonoBehaviour
         
         questions = new List<Question>
         {
-            new Question { questionText = "ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Õ°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½?", correctAnswer = "ï¿½ï¿½ï¿½ï¿½Å·" },
-            new Question { questionText = "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?", correctAnswer = "Ç²ï¿½ï¿½" }
+            new Question { questionText = "½ÅÇÏ°¡ ¿Õ°ú Çì¾îÁú ¶§ ÇÏ´Â ¸»Àº?", correctAnswer = "¹ÙÀÌÅ·" },
+            new Question { questionText = "°øÀÌ ¿ôÀ¸¸é?", correctAnswer = "Ç²º¼" }
         };
         opendoor.SetActive(false);
         
@@ -72,7 +72,7 @@ public class QuizManager : MonoBehaviour
                 closedoor.SetActive(false);
                 submitButton.interactable = false; 
 
-                FlowManager.Instance.ReturnToMainFlow();
+                End();
             }
             else
             {
@@ -85,5 +85,10 @@ public class QuizManager : MonoBehaviour
             
             feedbackText.text = "´Ù½Ã.";
         }
+    }
+    
+    public void End()
+    {
+        SceneManager.LoadScene(FlowManager.Instance.mainGameSceneName);
     }
 }

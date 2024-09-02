@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 5-8
   m_EditorClassIdentifier: 
   CharacterName: 
-  text: "\uADF8\uB9AC\uACE0 \uD3C9\uC18C\uBCF4\uB2E4\uB3C4 \uB354 \uC870\uADF8\uB9C8\uD55C
-    \uBAA9\uC18C\uB9AC\uB85C \uB9D0\uD588\uB2E4"
+  text: "(\uADF8\uB9AC\uACE0 \uD3C9\uC18C\uBCF4\uB2E4\uB3C4 \uB354 \uC870\uADF8\uB9C8\uD55C
+    \uBAA9\uC18C\uB9AC\uB85C \uB9D0\uD588\uB2E4.)"
   fontSize: 45
   textSpeed: 15
   hasOption: 0
@@ -26,5 +26,6 @@ MonoBehaviour:
   imageLeft: {fileID: 0}
   imageMiddle: {fileID: 0}
   imageRight: {fileID: 0}
+  imageFront: {fileID: 0}
   audioClip: {fileID: 0}
   audioVolume: 1
