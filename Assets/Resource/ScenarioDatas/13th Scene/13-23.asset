@@ -19,8 +19,8 @@ MonoBehaviour:
   hasOption: 0
   nextScenario: {fileID: 0}
   options: []
-  changeScene: 0
-  sceneName: 
+  changeScene: 1
+  sceneName: Ending Scene
   background: {fileID: 0}
   imageLeft: {fileID: 0}
   imageMiddle: {fileID: 0}
