@@ -27,6 +27,9 @@ public class FlowManager : MonoBehaviour
     private string currentText;
     private bool textComplete = false;
 
+    private string replaceName = "$player";
+    public string playerName = "main";
+
     //singleton pattern
     private static FlowManager instance;
     public static FlowManager Instance
@@ -44,6 +47,11 @@ public class FlowManager : MonoBehaviour
             }
             return instance;
         }
+    }
+
+    string t(string text)
+    {
+        return text.Replace(replaceName, playerName);
     }
 
     void Awake()
@@ -66,8 +74,8 @@ public class FlowManager : MonoBehaviour
     IEnumerator ShowText()
     {
         textBox.fontSize = scenarioData.fontSize;
-        nameBox.text = scenarioData.CharacterName;
-        currentText = scenarioData.text;
+        nameBox.text = t(scenarioData.CharacterName);
+        currentText = t(scenarioData.text);
         textComplete = false;
         for(int i = 0; i < scenarioData.text.Length; i++)
         {
@@ -91,7 +99,7 @@ public class FlowManager : MonoBehaviour
             options[i].SetSnarioData(scenarioData.options[i].optionResult);
 
             TMP_Text optionText = optionObj.GetComponentInChildren<TMP_Text>();
-            optionText.text = scenarioData.options[i].optionText;
+            optionText.text = t(scenarioData.options[i].optionText);
             optionText.fontSize = scenarioData.options[i].fontSize;
 
             optionObj.SetActive(false);
