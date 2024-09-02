@@ -78,6 +78,9 @@ public class FlowManager : MonoBehaviour
         optionCor = StartCoroutine(ShowOptions());
     }
 
+    /// <summary>
+    /// 선택지 오브젝트를 생성하고, 데이터를 할당합니다.
+    /// </summary>
     void GenerateOptions()
     {
         options = new OptinoScript[scenarioData.options.Length];
@@ -113,14 +116,20 @@ public class FlowManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 선택지가 클릭되지 않도록 하고, 참조를 삭제합니다.
+    /// </summary>
     public void DiscardOptions()
     {
         StopCoroutine(optionCor);
         for (int i = 0; i < options.Length; i++)
         {
-            options[i].Discarded = true;
             options[i].SkipFadeIn();
-            options[i].DelOption();
+            if (!options[i].selected)
+            {
+                options[i].DelOption();
+            }
+            options[i].Discarded = true;
             options[i] = null;
         }
     }

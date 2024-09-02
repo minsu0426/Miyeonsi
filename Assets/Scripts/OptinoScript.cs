@@ -16,8 +16,7 @@ public class OptinoScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rectTransform = GetComponent<RectTransform>();
-        canvasGroup = GetComponent<CanvasGroup>();
+
     }
 
     // Update is called once per frame
@@ -36,25 +35,25 @@ public class OptinoScript : MonoBehaviour
         if (Discarded) return;
         selected = true;
         FlowManager.Instance.DiscardOptions();
-        FadeOutCor = StartCoroutine(MoveAndFadeOut(0.7f,0.3f));
+        FadeOutCor = StartCoroutine(MoveAndFadeOut(0.5f,0.25f));
     }
 
     public void SkipFadeIn()
     {
-        StopCoroutine(FadeInCor);
-        FadeInCor = StartCoroutine(FadeIn(0));
+        if(FadeInCor!= null)
+            StopCoroutine(FadeInCor);
     }
 
     public void ShowOption()
     {
         gameObject.SetActive(true);
         canvasGroup = GetComponent<CanvasGroup>();
-        FadeInCor = StartCoroutine(FadeIn(0.3f));
+        FadeInCor = StartCoroutine(FadeIn(0.25f));
     }
 
     public void DelOption()
     {
-        StartCoroutine(MoveAndFadeOut(0,0.3f));
+        StartCoroutine(MoveAndFadeOut(0,0.25f));
     }
 
     public IEnumerator FadeIn(float duration)
@@ -80,6 +79,9 @@ public class OptinoScript : MonoBehaviour
 
     IEnumerator MoveAndFadeOut(float delay, float duration)
     {
+        rectTransform = GetComponent<RectTransform>();
+        canvasGroup = GetComponent<CanvasGroup>();
+
         Vector2 startPosition = rectTransform.anchoredPosition;
         Vector2 targetPosition = new Vector2(rectTransform.anchoredPosition.x+100, rectTransform.anchoredPosition.y);
         float elapsedTime = 0f;
@@ -89,7 +91,8 @@ public class OptinoScript : MonoBehaviour
         {
             // 시간 경과에 따른 비율 계산
             if (elapsedTime > delay)
-                t = elapsedTime-delay / duration;
+                t = (elapsedTime-delay) / duration;
+                print(t);
 
             // UI 요소의 위치를 서서히 이동
             rectTransform.anchoredPosition = Vector2.Lerp(startPosition, targetPosition, t);
