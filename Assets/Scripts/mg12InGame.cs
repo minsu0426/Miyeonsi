@@ -3,85 +3,91 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class QuizManager : MonoBehaviour
 {
-    // Áú¹® Å¬·¡½º
+    // ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½
     [System.Serializable]
     public class Question
     {
-        public string questionText;  // Áú¹® ÅØ½ºÆ®
-        public string correctAnswer; // Á¤´ä ÅØ½ºÆ®
+        public string questionText;  // ï¿½ï¿½ï¿½ï¿½ ï¿½Ø½ï¿½Æ®
+        public string correctAnswer; // ï¿½ï¿½ï¿½ï¿½ ï¿½Ø½ï¿½Æ®
     }
 
-    public List<Question> questions; // Áú¹® ¸®½ºÆ®
-    public TextMeshProUGUI questionText;  // Áú¹®À» Ç¥½ÃÇÒ TextMeshProUGUI
-    public TMP_InputField answerInput;    // »ç¿ëÀÚ°¡ ´äÀ» ÀÔ·ÂÇÒ TMP_InputField
-    public Button submitButton;           // ´äÀ» Á¦ÃâÇÒ Button UI
-    public TextMeshProUGUI feedbackText;  // °á°ú ÇÇµå¹éÀ» Ç¥½ÃÇÒ TextMeshProUGUI
+    public List<Question> questions; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®
+    public TextMeshProUGUI questionText;  // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½ï¿½ï¿½ TextMeshProUGUI
+    public TMP_InputField answerInput;    // ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ TMP_InputField
+    public Button submitButton;           // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Button UI
+    public TextMeshProUGUI feedbackText;  // ï¿½ï¿½ï¿½ ï¿½Çµï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½ï¿½ï¿½ TextMeshProUGUI
     public GameObject closedoor;
     public GameObject opendoor;
 
-    private int currentQuestionIndex = 0; // ÇöÀç Áú¹® ÀÎµ¦½º
+    private int currentQuestionIndex = 0; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ï¿½ï¿½
 
     void Start()
     {
-        // Áú¹® ¸®½ºÆ®¸¦ ÃÊ±âÈ­ÇÏ°í Áú¹®À» Ãß°¡ÇÕ´Ï´Ù.
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½Ê±ï¿½È­ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½Õ´Ï´ï¿½.
         questions = new List<Question>
         {
             new Question { questionText = "ÇÑ±Û", correctAnswer = "god" },
             new Question { questionText = "1+2", correctAnswer = "3" }
         };
         opendoor.SetActive(false);
-        // Ã¹ ¹øÂ° Áú¹®À» Ç¥½Ã
+        // Ã¹ ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½
         DisplayQuestion();
 
-        // ¹öÆ°¿¡ Á¦Ãâ ÇÔ¼ö ¿¬°á
+        // ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½ ï¿½ï¿½ï¿½ï¿½
         submitButton.onClick.AddListener(CheckAnswer);
     }
 
-    // ÇöÀç Áú¹®À» UI¿¡ Ç¥½ÃÇÏ´Â ÇÔ¼ö
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ UIï¿½ï¿½ Ç¥ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½
     void DisplayQuestion()
     {
-        // Áú¹®À» ¼³Á¤ÇÏ°í ÇÇµå¹é ÅØ½ºÆ® ÃÊ±âÈ­
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Çµï¿½ï¿½ ï¿½Ø½ï¿½Æ® ï¿½Ê±ï¿½È­
         questionText.text = questions[currentQuestionIndex].questionText;
         feedbackText.text = "";
 
-        // ´äº¯ ÀÔ·Â ÇÊµå¸¦ ºñ¿ì°í Æ÷Ä¿½º
+        // ï¿½äº¯ ï¿½Ô·ï¿½ ï¿½Êµå¸¦ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¿ï¿½ï¿½
         answerInput.text = "";
         answerInput.ActivateInputField();
     }
 
-    // ´äÀ» Á¦ÃâÇÒ ¶§ È£ÃâµÇ´Â ÇÔ¼ö
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È£ï¿½ï¿½Ç´ï¿½ ï¿½Ô¼ï¿½
     void CheckAnswer()
     {
-        // »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ ´äÀ» ¼Ò¹®ÀÚ·Î º¯È¯ÇÏ¿© ºñ±³ (´ë¼Ò¹®ÀÚ ±¸ºÐ ¾øÀÌ Ã³¸®)
+        // ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ò¹ï¿½ï¿½Ú·ï¿½ ï¿½ï¿½È¯ï¿½Ï¿ï¿½ ï¿½ï¿½ (ï¿½ï¿½Ò¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½)
         string userAnswer = answerInput.text.ToLower().Trim();
         string correctAnswer = questions[currentQuestionIndex].correctAnswer.ToLower().Trim();
 
-        // Á¤´ä È®ÀÎ
+        // ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½
         if (userAnswer == correctAnswer)
         {
-            currentQuestionIndex++; // ´ÙÀ½ Áú¹®À¸·Î ³Ñ¾î°¨
+            currentQuestionIndex++; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ¾î°¨
 
-            // ¸ðµç Áú¹®À» ´Ù ¸ÂÃá °æ¿ì
+            // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
             if (currentQuestionIndex >= questions.Count)
             {
                 opendoor.SetActive(true);
                 closedoor.SetActive(false);
-                submitButton.interactable = false; // ´õ ÀÌ»ó ´ä Á¦Ãâ ºÒ°¡´É
-                //nextscene
+                submitButton.interactable = false; // ï¿½ï¿½ ï¿½Ì»ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ò°ï¿½ï¿½ï¿½
+                End();
             }
             else
             {
-                // ´ÙÀ½ Áú¹®À» Ç¥½Ã
+                // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½
                 DisplayQuestion();
             }
         }
         else
         {
-            // ¿À´äÀÏ °æ¿ì ÇÇµå¹é Ç¥½Ã
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Çµï¿½ï¿½ Ç¥ï¿½ï¿½
             feedbackText.text = "try again";
         }
+    }
+
+    public void End()
+    {
+        SceneManager.LoadScene(FlowManager.Instance.mainGameSceneName);
     }
 }
