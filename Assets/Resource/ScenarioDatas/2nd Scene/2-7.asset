@@ -17,9 +17,13 @@ MonoBehaviour:
   fontSize: 45
   textSpeed: 15
   hasOption: 0
-  nextScenario: {fileID: 0}
+  nextScenario: {fileID: 11400000, guid: 0074f6bee987ba54886344b94e47af52, type: 2}
   options: []
+  changeScene: 0
+  sceneName: 
   background: {fileID: 0}
   imageLeft: {fileID: 0}
   imageMiddle: {fileID: 0}
   imageRight: {fileID: 0}
+  audioClip: {fileID: 0}
+  audioVolume: 1

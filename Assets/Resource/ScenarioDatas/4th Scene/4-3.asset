@@ -10,17 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a698fc3fa7a41143b9f8100752b8a65, type: 3}
-  m_Name: 3-17
+  m_Name: 4-3
   m_EditorClassIdentifier: 
-  CharacterName: "\uAE40\uBBFC\uC218"
-  text: "\uB2E4 \uBE44\uCF1C\uBD10."
+  CharacterName: 
+  text: "\uD604\uC131\uC774\uB294 \uC2E0\uAE30\uD55C \uB3D9\uBB3C\uC744 \uBCF4\uB4EF\uC774
+    \uCC98\uB2E4\uBCF4\uB2E4\uAC00 \uC774\uB0B4\r\n\uD5C8\uB984\uD55C \uB178\uD2B8\uBD81\uACFC
+    \uC218\uB9CE\uC740 \uC804\uC120\uB4E4\uC744 \uAEBC\uB0B4 \uC5F0\uACB0\uD558\uAE30
+    \uC2DC\uC791\uD558\uB354\uB2C8\r\n\uC790\uB9AC\uC5D0 \uC549\uC558\uB2E4."
   fontSize: 45
   textSpeed: 15
   hasOption: 0
-  nextScenario: {fileID: 11400000, guid: 7aa33eb519e8d3546b0c25c7ad08de28, type: 2}
+  nextScenario: {fileID: 11400000, guid: d7bdb0db4308f594fbcc271d404f9717, type: 2}
   options: []
-  changeScene: 1
-  sceneName: Mini game 1
+  changeScene: 0
+  sceneName: 
   background: {fileID: 0}
   imageLeft: {fileID: 0}
   imageMiddle: {fileID: 0}
