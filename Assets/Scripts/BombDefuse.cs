@@ -9,40 +9,52 @@ public class BombDefuse : MonoBehaviour
     public Button[] buttons;
     public int[] correctSequence;
     private int currentStep = 0;
-    public float timeLimit = 0;
     private float timeRemaining;
     private bool defused = false;
+    private bool flag = false;
     public Text timerText;
     public GameObject gameOverSereen;
     public GameObject successScreen;
     void Start()
     {
-        timeRemaining = timeLimit;
+        timeRemaining = 30f;
         UpdateTimerText();
+        int Sequence_Rage = Random.Range(4,6);
+        correctSequence = new int[Sequence_Rage];
+
+        for(int i = 0; i<Sequence_Rage; i++)
+        {
+            correctSequence[i] = Random.Range(1, 9);
+            Debug.Log(correctSequence[i]);
+        }
     }
 
     void Update()
     {
-        if(!defused)
+        if (!flag)
         {
-            timeRemaining -= Time.deltaTime;
-            UpdateTimerText();
-        }
-        if(timeRemaining <= 0)
-        {
-            GameOver();
+            if (!defused)
+            {
+                timeRemaining -= Time.deltaTime;
+                UpdateTimerText();
+            }
+            if (timeRemaining <= 0)
+            {
+                flag = true;
+                GameOver();
+            }
         }
     }
 
     public void OnButtonPress(int buttonIndex)
     {
-        if(!defused && timeRemaining > 0)
+        if (!defused && timeRemaining > 0)
         {
             if (correctSequence[currentStep] == buttonIndex)
             {
                 currentStep++;
 
-                if(currentStep >= correctSequence.Length)
+                if (currentStep >= correctSequence.Length)
                 {
                     DefuseBomb();
                 }
@@ -50,24 +62,29 @@ public class BombDefuse : MonoBehaviour
         }
         else
         {
-            GameOver();
+             GameOver();
+            timeRemaining = 0;
         }
     }
 
     void UpdateTimerText()
     {
-        timerText.text = "Time: " + Mathf.Max(timeRemaining, 0).ToString("F2");
+        float minutes = Mathf.FloorToInt(timeRemaining / 60);
+        float seconds = Mathf.FloorToInt(timeRemaining % 60);
+
+        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
     void GameOver()
     {
-        defused = true;
-        gameOverSereen.SetActive(true);
+        Debug.Log("Game Over");
+       // gameOverSereen.SetActive(true);
     }
-
-    void DefuseBomb()
+    
+     void DefuseBomb()
     {
         defused = true;
-        successScreen.SetActive(true);
+        Debug.Log("Defused");
+        //successScreen.SetActive(true);
     }
 }

@@ -7,6 +7,6 @@ public class NextSceneButton : MonoBehaviour
 {
     public void OnButtonPressed()
     {
-        SceneManager.LoadScene("FirstGameScene");
+        SceneManager.LoadScene("Prologue");
     }
 }
