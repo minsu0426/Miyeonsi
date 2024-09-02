@@ -30,8 +30,8 @@ public class QuizManager : MonoBehaviour
         // ���� ����Ʈ�� �ʱ�ȭ�ϰ� ������ �߰��մϴ�.
         questions = new List<Question>
         {
-            new Question { questionText = "how old me", correctAnswer = "21" },
-            new Question { questionText = "T1", correctAnswer = "1557" }
+            new Question { questionText = "�ѱ�", correctAnswer = "god" },
+            new Question { questionText = "1+2", correctAnswer = "3" }
         };
         opendoor.SetActive(false);
         // ù ��° ������ ǥ��
