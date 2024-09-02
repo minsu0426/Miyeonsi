@@ -23,10 +23,12 @@ public class BombDefuse : MonoBehaviour
     public float delayBetweenBlinks = 0.5f;
     public float startDelay = 2f;
     private Color[] originalColors;
+    public Image redLamp;
+    public Image greenLamp;
 
     void Start()
     {
-        timeRemaining = 21f;
+        timeRemaining = 31f;
         UpdateTimerText();
         Sequence_Rage = 7;
         correctSequence = new int[Sequence_Rage];
@@ -43,6 +45,7 @@ public class BombDefuse : MonoBehaviour
             originalColors[i] = buttons[i].GetComponent<Image>().color;
         }
 
+        ReSetLamps();
         StartCoroutine(ShowSequence());
     }
 
@@ -65,16 +68,24 @@ public class BombDefuse : MonoBehaviour
 
     public void OnButtonPress(int buttonIndex)
     {
+        ReSetLamps();
+
         if (!defused && timeRemaining > 0)
         {
             if (correctSequence[currentStep] == buttonIndex)
             {
                 currentStep++;
+                StartCoroutine(BlinkLamp(greenLamp));
 
                 if (currentStep >= correctSequence.Length)
                 {
                     DefuseBomb();
                 }
+            }
+            else
+            {
+                StartCoroutine(BlinkLamp(redLamp));
+                currentStep = 0;
             }
         }
         else
@@ -121,5 +132,28 @@ public class BombDefuse : MonoBehaviour
         buttonImage.color = blinkColor;
         yield return new WaitForSeconds(blinkDuration);
         buttonImage.color = originalColors[Array.IndexOf(buttons, button)];
+    }
+
+    void ReSetLamps()
+    {
+        Color redColor = redLamp.color;
+        redColor.a = 0;
+        redLamp.color = redColor;
+
+        Color greenColor = greenLamp.color;
+        greenColor.a = 0;
+        greenLamp.color = greenColor;
+    }
+    
+    IEnumerator BlinkLamp(Image lamp)
+    {
+        Color lampColor = lamp.color;
+        lampColor.a = 1;
+        lamp.color = lampColor;
+
+        yield return new WaitForSeconds(blinkDuration);
+
+        lampColor.a = 0;
+        lamp.color = lampColor;
     }
 }
