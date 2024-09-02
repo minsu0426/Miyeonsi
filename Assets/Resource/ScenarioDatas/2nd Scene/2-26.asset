@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 2-26
   m_EditorClassIdentifier: 
   CharacterName: "\uC8FC\uD604\uC131"
-  text: "\uBC8C\uB8EC \uCEF4\uD37C\uB2C8"
+  text: '"Balloon Cimpany"...'
   fontSize: 45
   textSpeed: 15
   hasOption: 0

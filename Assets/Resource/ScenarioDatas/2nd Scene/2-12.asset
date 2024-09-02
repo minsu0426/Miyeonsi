@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: 2-12
   m_EditorClassIdentifier: 
   CharacterName: 
-  text: "\uC6B0\uB9AC\uB294 \uC7A0\uC2DC \uB9D0\uC774 \uC5C6\uC5C8\uB2E4.\r\n\uC554\uC6B8\uD55C
+  text: "(\uC6B0\uB9AC\uB294 \uC7A0\uC2DC \uB9D0\uC774 \uC5C6\uC5C8\uB2E4.\r\n\uC554\uC6B8\uD55C
     \uD604\uC2E4\uC744 \uC790\uAC01\uD558\uB2C8 \uC544\uBB34\uC0DD\uAC01\uB3C4 \uB4E4\uC9C0
-    \uC54A\uC558\uB2E4.\r\n"
+    \uC54A\uC558\uB2E4.)\r\n"
   fontSize: 45
   textSpeed: 15
   hasOption: 0

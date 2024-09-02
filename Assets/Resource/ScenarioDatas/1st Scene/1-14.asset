@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 1-14
   m_EditorClassIdentifier: 
   CharacterName: $player
-  text: "\uC54C\uACA0\uC5B4. \uC790\uB9AC\uB97C \uC62E\uAE30\uC790\r\n"
+  text: "\uC54C\uACA0\uC5B4. \uC790\uB9AC\uB97C \uC62E\uAE30\uC790.\r\n"
   fontSize: 45
   textSpeed: 15
   hasOption: 0

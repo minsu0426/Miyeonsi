@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 3-1
   m_EditorClassIdentifier: 
   CharacterName: "\uAE40\uBBFC\uC218"
-  text: "\uC774\uAC74 \uBBF8\uCE5C\uC9D3\uC774\uC57C. \uADF8 \u201C\uBC8C\uB8EC \uCEF4\uD37C\uB2C8\u201D
-    \uB77C\uACE0"
+  text: "\uC774\uAC74 \uBBF8\uCE5C\uC9D3\uC774\uC57C. \uADF8 \uC545\uB784\uD558\uAE30\uB85C
+    \uC720\uBA85\uD55C \u201CBallon Company\u201D \uB77C\uACE0.."
   fontSize: 45
   textSpeed: 15
   hasOption: 0

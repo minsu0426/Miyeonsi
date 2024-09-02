@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 7-9
   m_EditorClassIdentifier: 
   CharacterName: $player
-  text: "\uC751"
+  text: "\uC751.."
   fontSize: 45
   textSpeed: 15
   hasOption: 0

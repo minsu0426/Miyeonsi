@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 1-12
   m_EditorClassIdentifier: 
   CharacterName: "\uAE40\uBBFC\uC218"
-  text: "\u2026\uC7A0\uB9CC \uC598\uAE30 \uC880 \uD560 \uC218 \uC788\uC744\uAE4C?
+  text: "\u2026\uC7A0\uAE50 \uC774\uC57C\uAE30 \uC880 \uD560 \uC218 \uC788\uC744\uAE4C?
     \r\n"
   fontSize: 45
   textSpeed: 15

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 11-9
   m_EditorClassIdentifier: 
   CharacterName: 
-  text: "\uBBFC\uC218\uB294 \uB098\uB97C \uAEF4\uC548\uC558\uB2E4\r\n"
+  text: "(\uBBFC\uC218\uB294 \uB098\uB97C \uAEF4\uC548\uC558\uB2E4)\r\n"
   fontSize: 45
   textSpeed: 15
   hasOption: 0

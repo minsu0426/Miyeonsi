@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 8-6
   m_EditorClassIdentifier: 
   CharacterName: 
-  text: "\uBBFC\uC218\uB294 \uC544\uBB34\uB7F0 \uBD88\uB9CC\uB3C4 \uC5C6\uC774 \uBC14\uB85C
-    \uB2EC\uB824\uB098\uAC08 \uC900\uBE44\uB97C \uD588\uB2E4"
+  text: "(\uBBFC\uC218\uB294 \uC544\uBB34\uB7F0 \uBD88\uB9CC\uB3C4 \uC5C6\uC774 \uBC14\uB85C
+    \uB2EC\uB824\uB098\uAC08 \uC900\uBE44\uB97C \uD588\uB2E4.)"
   fontSize: 45
   textSpeed: 15
   hasOption: 0
