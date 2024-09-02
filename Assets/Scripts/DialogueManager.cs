@@ -10,8 +10,7 @@ public class DialogueManager : MonoBehaviour
     public float textSpeed = 0.05f;           // 한 글자씩 출력되는 시간 지연 (초 단위)
     public int currentDialogueIndex;         // 현재 대사 인덱스
 
-    public FirstScene firstScene;           
-    public int buttonActivationDialogueIndex = 2; // 버튼을 활성화할 대사 인덱스
+    public FirstScene firstScene;
 
     public Image targetImage;                 // 변경할 이미지 UI 요소
     public Sprite newSprite;                  // 대사 인덱스가 특정 값일 때 표시할 새 이미지
