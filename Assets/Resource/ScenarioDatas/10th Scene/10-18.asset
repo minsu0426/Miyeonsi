@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: 10-18
   m_EditorClassIdentifier: 
   CharacterName: 
-  text: "\uC6B0\uB9AC\uAC00 \uBCC4\uB9D0\uC744 \uD558\uC9C0 \uC54A\uC558\uC9C0\uB9CC\r\n\uC800
+  text: "(\uC6B0\uB9AC\uAC00 \uBCC4\uB9D0\uC744 \uD558\uC9C0 \uC54A\uC558\uC9C0\uB9CC\r\n\uC800
     \uC0AC\uB78C\uC740 \uACC4\uC18D\uD558\uC5EC \uB9D0\uC744 \uC774\uC5C8\uB2E4.
-    \r\n"
+    )\r\n"
   fontSize: 45
   textSpeed: 15
   hasOption: 0
@@ -28,5 +28,7 @@ MonoBehaviour:
   imageMiddle: {fileID: 0}
   imageRight: {fileID: 0}
   imageFront: {fileID: 0}
-  audioClip: {fileID: 0}
-  audioVolume: 1
+  soundEffect: {fileID: 0}
+  SoundEffectVolume: 1
+  backgroundMusic: {fileID: 0}
+  backgroundMusicVolume: 1

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 13-22
   m_EditorClassIdentifier: 
   CharacterName: 
-  text: "\uC5B4\uB290\uC0C8 \uBC1D\uAC8C \uB72C \uD574\uB294\r(\n\uC6B0\uB9AC\uB97C
+  text: " \uC5B4\uB290\uC0C8 \uBC1D\uAC8C \uB72C \uD574\uB294\r(\n\uC6B0\uB9AC\uB97C
     \uBE44\uCD94\uACE0 \uC788\uC5C8\uB2E4. )\r\n"
   fontSize: 45
   textSpeed: 15
@@ -27,5 +27,7 @@ MonoBehaviour:
   imageMiddle: {fileID: 0}
   imageRight: {fileID: 0}
   imageFront: {fileID: 0}
-  audioClip: {fileID: 0}
-  audioVolume: 1
+  soundEffect: {fileID: 0}
+  SoundEffectVolume: 1
+  backgroundMusic: {fileID: 0}
+  backgroundMusicVolume: 1
