@@ -2746,6 +2746,8 @@ MonoBehaviour:
   startDelay: 0.2
   redLamp: {fileID: 1695676585}
   greenLamp: {fileID: 1075149038}
+  success: {fileID: 11400000, guid: 336c40daa90d4284eab62caa11849260, type: 2}
+  failure: {fileID: 11400000, guid: 5b333a71eec003c44b8ef68af4c9cd9e, type: 2}
 --- !u!1 &1539479137
 GameObject:
   m_ObjectHideFlags: 0

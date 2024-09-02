@@ -25,6 +25,9 @@ public class BombDefuse : MonoBehaviour
     public Image redLamp;
     public Image greenLamp;
 
+    public ScenarioData success;
+    public ScenarioData failure;
+
     void Start()
     {
         timeRemaining = 31f;
@@ -105,12 +108,16 @@ public class BombDefuse : MonoBehaviour
     void GameOver()
     {
         Debug.Log("Game Over");
+        FlowManager.Instance.scenarioData = failure;
+        FlowManager.Instance.ReturnToMainFlow();
     }
     
      void DefuseBomb()
     {
         defused = true;
         Debug.Log("Defused");
+        FlowManager.Instance.scenarioData = success;
+        FlowManager.Instance.ReturnToMainFlow();
     }
 
     IEnumerator ShowSequence()
