@@ -125,6 +125,7 @@ public class FlowManager : MonoBehaviour
             {
                 //
             } else {
+                EndCurrentScenario();
                 StartScenario(scenarioData.nextScenario);
             }
         } else {
@@ -159,15 +160,19 @@ public class FlowManager : MonoBehaviour
         StartScenario(scenarioData.nextScenario);
     }
 
-    public void StartScenario(ScenarioData newScenarioData)
+    public void EndCurrentScenario()
     {
         if (scenarioData.changeScene && isinMainFlow)
         {
             isinMainFlow = false;
             SceneManager.LoadScene(scenarioData.sceneName);
-            scenarioData = newScenarioData;
+            scenarioData = scenarioData.nextScenario;
             return;
         }
+    }
+
+    public void StartScenario(ScenarioData newScenarioData)
+    {
         isinMainFlow = true;
 
         if (newScenarioData == null) return;
