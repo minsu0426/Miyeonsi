@@ -38,6 +38,9 @@ public class ScenarioData : ScriptableObject
     public Sprite imageRight;
     public Sprite imageFront;
 
+    [Header("페이드 아웃 설정")]
+    public bool fadeOut;
+
     [Header("효과음 설정")]
     public AudioClip soundEffect;
     public float SoundEffectVolume = 1;

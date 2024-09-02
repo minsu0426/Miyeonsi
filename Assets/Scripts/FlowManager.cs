@@ -184,7 +184,13 @@ public class FlowManager : MonoBehaviour
             scenarioData = nextScenario;
             return;
         }
-        StartScenario(nextScenario);
+
+        if (scenarioData.fadeOut)
+        {
+            StartCoroutine(FadeOutAndStartNext(nextScenario, 1f));
+        } else {
+            StartScenario(nextScenario);
+        }
     }
 
     public void StartScenario(ScenarioData newScenarioData)
@@ -315,5 +321,32 @@ public class FlowManager : MonoBehaviour
         }
         blinder.alpha = 1f;
         SceneManager.LoadScene(sceneName);
+    }
+
+    public IEnumerator FadeOutAndStartNext(ScenarioData scenarioData, float duration)
+    {
+        CanvasGroup blinder = Instantiate(BlinderPrefab, Vector3.zero, Quaternion.identity).GetComponent<CanvasGroup>();
+        float elapsedTime = 0f;
+        float t = 0f;
+    
+        while (elapsedTime < duration)
+        {
+            t = elapsedTime / duration;
+
+            // UI 요소의 투명도 서서히 증가
+            blinder.alpha = Mathf.Lerp(0f, 1f, t);
+
+            // 경과 시간 증가
+            elapsedTime += Time.deltaTime;
+
+            // 다음 프레임까지 대기
+            yield return null;
+        }
+        blinder.alpha = 1f;
+        
+        yield return new WaitForSeconds(0.5f);
+
+        StartScenario(scenarioData);
+        Destroy(blinder.gameObject);
     }
 }
