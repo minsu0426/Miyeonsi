@@ -32,7 +32,7 @@ public class BombDefuse : MonoBehaviour
     {
         timeRemaining = 31f;
         UpdateTimerText();
-        Sequence_Rage = 7;
+        Sequence_Rage = 8;
         correctSequence = new int[Sequence_Rage];
         originalColors = new Color[9];
 
