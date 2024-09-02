@@ -939,7 +939,7 @@ MonoBehaviour:
   - "\uC778\uB958\uB294 \uC5B4\uB290 \uC21C\uAC04 '\uACF5\uC874'\uC774\uB77C\uB294
     \uB2E8\uC5B4\uB97C \uC783\uAC8C \uB418\uACE0 \uC810\uC810 \uC1E0\uB77D\uC758
     \uAE38\uC744 \uAC77\uAC8C \uB41C\uB2E4.  "
-  textSpeed: 0.08
+  textSpeed: 0.05
   currentDialogueIndex: 0
   firstScene: {fileID: 0}
   targetImage: {fileID: 254971209}
