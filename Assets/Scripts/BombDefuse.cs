@@ -16,7 +16,6 @@ public class BombDefuse : MonoBehaviour
     private int Sequence_Rage;
     private bool flag = false;
     public Text timerText;
-    public GameObject gameOverSereen;
     public Button[] buttons;
     public Color blinkColor = Color.yellow;
     public float blinkDuration = 0.5f;
