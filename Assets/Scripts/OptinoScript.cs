@@ -92,7 +92,6 @@ public class OptinoScript : MonoBehaviour
             // 시간 경과에 따른 비율 계산
             if (elapsedTime > delay)
                 t = (elapsedTime-delay) / duration;
-                print(t);
 
             // UI 요소의 위치를 서서히 이동
             rectTransform.anchoredPosition = Vector2.Lerp(startPosition, targetPosition, t);

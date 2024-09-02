@@ -26,6 +26,7 @@ public class FlowManager : MonoBehaviour
 
     private string currentText;
     private bool textComplete = false;
+    private bool isinMainFlow = true;
 
     private string replaceName = "$player";
     public string playerName = "main";
@@ -68,8 +69,6 @@ public class FlowManager : MonoBehaviour
 
     void Start()
     {
-        playerName = PlayerData.instance.GetPlayerName();
-
         StartScenario(scenarioData);
     }
 
@@ -112,6 +111,7 @@ public class FlowManager : MonoBehaviour
     {
         if(textComplete)
         {
+
             if(scenarioData.hasOption)
             {
                 //
@@ -144,8 +144,23 @@ public class FlowManager : MonoBehaviour
         }
     }
 
+    public void ReturnToMainFlow()
+    {
+        StartScenario(scenarioData.nextScenario);
+    }
+
     public void StartScenario(ScenarioData newScenarioData)
     {
+        if (scenarioData.changeScene && isinMainFlow)
+        {
+            isinMainFlow = false;
+            SceneManager.LoadScene(newScenarioData.sceneName);
+            return;
+        }
+        isinMainFlow = true;
+
+        if (newScenarioData == null) return;
+
         if (MainCanvasObject == null)
         {
             MainCanvasObject = GameObject.Find("MainCanvas");

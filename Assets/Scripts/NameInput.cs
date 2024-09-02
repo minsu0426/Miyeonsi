@@ -30,6 +30,7 @@ public class NameInput : MonoBehaviour
     {
         string playerName = nameInputField.text;
         PlayerData.instance.SetPlayerName(playerName);
-        // ÇÃ·¹ÀÌ¾î ÀÌ¸§ ÀÔ·Â ÈÄ °ÔÀÓÀÇ ´Ù¸¥ ºÎºÐÀ¸·Î ³Ñ¾î°¡´Â ·ÎÁ÷À» Ãß°¡
+        FlowManager.Instance.playerName = playerName;
+        // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½Ì¸ï¿½ ï¿½Ô·ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¸ï¿½ ï¿½Îºï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ¾î°¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½
     }
 }

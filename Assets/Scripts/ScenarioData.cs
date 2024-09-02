@@ -27,6 +27,10 @@ public class ScenarioData : ScriptableObject
     public ScenarioData nextScenario;
     public Option[] options;
 
+    [Header("이후 씬 전환 여부")]
+    public bool changeScene;
+    public string sceneName;
+
     [Header("이미지 설정")]
     public Sprite background;
     public Sprite imageLeft;
