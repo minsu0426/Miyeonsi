@@ -162,6 +162,7 @@ MonoBehaviour:
   imageMiddle: {fileID: 95881867}
   imageRight: {fileID: 803025317}
   scenarioData: {fileID: 11400000, guid: c3d2869b11cda8a4daac7ba7e4fb9404, type: 2}
+  playerName: "\uC8FC\uC778\uACF5"
 --- !u!4 &19452083
 Transform:
   m_ObjectHideFlags: 0
