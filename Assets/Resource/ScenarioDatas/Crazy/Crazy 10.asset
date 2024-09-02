@@ -15,14 +15,14 @@ MonoBehaviour:
   CharacterName: 
   text: "\uADF8\uB54C \uBBFC\uC218\uB294 \uB098\uB97C \uD5A5\uD574 \uD2F0\uB77C\uBBF8\uC230
     \uAC74\uC744 \uACA8\uB204\uACE0 \uC3D8\uC558\uB2E4. \r\n"
-  fontSize: 30
-  textSpeed: 10
+  fontSize: 45
+  textSpeed: 15
   hasOption: 0
   nextScenario: {fileID: 11400000, guid: 86b6a4104c4495845a7e815f984de6de, type: 2}
   options: []
   changeScene: 0
   sceneName: 
-  background: {fileID: 0}
+  background: {fileID: 21300000, guid: 4506c900365154a4894d00fd6290fad3, type: 3}
   imageLeft: {fileID: 0}
   imageMiddle: {fileID: 0}
   imageRight: {fileID: 0}

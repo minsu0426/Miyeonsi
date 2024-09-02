@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a698fc3fa7a41143b9f8100752b8a65, type: 3}
-  m_Name: Crazy 11
+  m_Name: Hidden 4
   m_EditorClassIdentifier: 
-  CharacterName: 
-  text: "\u2026"
+  CharacterName: "\uAE40\uBBFC\uC218"
+  text: "\uC57C..!\r\n"
   fontSize: 45
   textSpeed: 15
   hasOption: 0
-  nextScenario: {fileID: 11400000, guid: 882bfc5eb70278b4eaabae2a66b28992, type: 2}
+  nextScenario: {fileID: 11400000, guid: 3c685764413061e4a89684aeee8c5008, type: 2}
   options: []
   changeScene: 0
   sceneName: 

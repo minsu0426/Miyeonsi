@@ -15,14 +15,14 @@ MonoBehaviour:
   CharacterName: $player
   text: "\uC774\uB807\uAC8C \uB41C \uAC74 \uB108 \uB355\uBD84\uC774\uC57C. \uCCAB\uBC88\uC9F8\uB294
     \uB2F9\uC5F0\uD788 \uB108\uAC00 \uD574\uBD10\uC57C\uC9C0!\r\n"
-  fontSize: 30
-  textSpeed: 10
+  fontSize: 45
+  textSpeed: 15
   hasOption: 0
   nextScenario: {fileID: 11400000, guid: 0088f5cf97f95c84b97f133bef128e9d, type: 2}
   options: []
   changeScene: 0
   sceneName: 
-  background: {fileID: 0}
+  background: {fileID: 21300000, guid: 4506c900365154a4894d00fd6290fad3, type: 3}
   imageLeft: {fileID: 0}
   imageMiddle: {fileID: 0}
   imageRight: {fileID: 0}

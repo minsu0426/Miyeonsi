@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CharacterName: $player
   text: "\uBB34\uC2A8 \uB9D0\uC744 \uADF8\uB807\uAC8C \uD574\r\n"
-  fontSize: 30
-  textSpeed: 10
+  fontSize: 45
+  textSpeed: 15
   hasOption: 0
   nextScenario: {fileID: 11400000, guid: 68de3e6cded2da944a1287ecc9b7b53d, type: 2}
   options: []
   changeScene: 0
   sceneName: 
-  background: {fileID: 0}
+  background: {fileID: 21300000, guid: 4506c900365154a4894d00fd6290fad3, type: 3}
   imageLeft: {fileID: 0}
   imageMiddle: {fileID: 0}
   imageRight: {fileID: 0}
