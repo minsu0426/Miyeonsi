@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c101b6f3331d48d4fb68f2b704d41942
+guid: 820abd720ec262a43ace2c38a9884782
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: movingminsu_0
+      name: RealMinsu_0
       rect:
         serializedVersion: 2
         x: 6
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95a9fd00474323a4fb179aa09e21bc67
-      internalID: -970750605
+      spriteID: 0d3e1a1139250b5429b7bdddbd3d101f
+      internalID: 150067690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: movingminsu_1
+      name: RealMinsu_1
       rect:
         serializedVersion: 2
         x: 34
@@ -145,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 580c30074b903f84188bedecd776f80f
-      internalID: 1331307725
+      spriteID: 3b97cd2de8a5c4c418d2d28ed2ee84cb
+      internalID: -1930725799
       vertices: []
       indices: 
       edges: []
@@ -162,8 +162,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      movingminsu_0: -970750605
-      movingminsu_1: 1331307725
+      RealMinsu_0: 150067690
+      RealMinsu_1: -1930725799
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
