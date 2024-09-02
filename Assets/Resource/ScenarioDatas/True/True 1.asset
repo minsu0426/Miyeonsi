@@ -10,24 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a698fc3fa7a41143b9f8100752b8a65, type: 3}
-  m_Name: 13-11
+  m_Name: True 1
   m_EditorClassIdentifier: 
   CharacterName: 
-  text: "\uB204\uAD6C\uB97C \uB9DE\uD790\uAC83\uC778\uAC00? \r"
+  text: "\uB098\uB294 \uD2F0\uB77C\uBBF8\uC230 \uAC74\uC744 \uC870\uC57D\uB3CC\uC5D0
+    \uC3D8\uC558\uB2E4. \uADF8\uB7EC\uC790 "
   fontSize: 45
   textSpeed: 15
   hasOption: 0
-  nextScenario: {fileID: 11400000}
-  options:
-  - optionText: "\uBBFC\uC218\uC5D0\uAC8C \uB118\uACA8\uC900\uB2E4"
-    fontSize: 30
-    optionResult: {fileID: 11400000, guid: 840f333e2cb17b043af33c6d828eab44, type: 2}
-  - optionText: "\uAE40\uBBFC\uC218"
-    fontSize: 30
-    optionResult: {fileID: 11400000, guid: 5fe0fbb51e6ceb94a80dc3072f09ecbd, type: 2}
-  - optionText: "\uC870\uC57D\uB3CC"
-    fontSize: 30
-    optionResult: {fileID: 11400000, guid: 3395572b6989994459701ed06ab910b9, type: 2}
+  nextScenario: {fileID: 11400000, guid: 6df3b468d4bc724428b23fed44ee6051, type: 2}
+  options: []
   changeScene: 0
   sceneName: 
   background: {fileID: 21300000, guid: 4506c900365154a4894d00fd6290fad3, type: 3}

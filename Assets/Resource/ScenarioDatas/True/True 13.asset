@@ -10,26 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a698fc3fa7a41143b9f8100752b8a65, type: 3}
-  m_Name: 13-11
+  m_Name: True 13
   m_EditorClassIdentifier: 
   CharacterName: 
-  text: "\uB204\uAD6C\uB97C \uB9DE\uD790\uAC83\uC778\uAC00? \r"
+  text: -true ending-
   fontSize: 45
   textSpeed: 15
   hasOption: 0
   nextScenario: {fileID: 11400000}
-  options:
-  - optionText: "\uBBFC\uC218\uC5D0\uAC8C \uB118\uACA8\uC900\uB2E4"
-    fontSize: 30
-    optionResult: {fileID: 11400000, guid: 840f333e2cb17b043af33c6d828eab44, type: 2}
-  - optionText: "\uAE40\uBBFC\uC218"
-    fontSize: 30
-    optionResult: {fileID: 11400000, guid: 5fe0fbb51e6ceb94a80dc3072f09ecbd, type: 2}
-  - optionText: "\uC870\uC57D\uB3CC"
-    fontSize: 30
-    optionResult: {fileID: 11400000, guid: 3395572b6989994459701ed06ab910b9, type: 2}
-  changeScene: 0
-  sceneName: 
+  options: []
+  changeScene: 1
+  sceneName: Ending Scene
   background: {fileID: 21300000, guid: 4506c900365154a4894d00fd6290fad3, type: 3}
   imageLeft: {fileID: 0}
   imageMiddle: {fileID: 0}
