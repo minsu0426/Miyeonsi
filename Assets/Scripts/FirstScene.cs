@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class FirstScene : MonoBehaviour
 {
-    //public Button yourButton;           // ¹öÆ° ÂüÁ¶
+    //public Button yourButton;           // ï¿½ï¿½Æ° ï¿½ï¿½ï¿½ï¿½
 
     public void OnButtonPressed()
     {

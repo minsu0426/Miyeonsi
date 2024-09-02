@@ -3,7 +3,17 @@ guid: 00393af39c5b8814583a1d9b68a370b0
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - MainCanvasObject: {instanceID: 0}
+  - textBox: {instanceID: 0}
+  - nameBox: {instanceID: 0}
+  - optionBox: {instanceID: 0}
+  - optionPrefab: {instanceID: 0}
+  - background: {instanceID: 0}
+  - imageLeft: {instanceID: 0}
+  - imageMiddle: {instanceID: 0}
+  - imageRight: {instanceID: 0}
+  - scenarioData: {fileID: 11400000, guid: c6d05b1a4c1b58d4fb7063a4450ea20d, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
