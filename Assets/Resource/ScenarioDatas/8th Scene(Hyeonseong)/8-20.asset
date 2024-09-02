@@ -10,18 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a698fc3fa7a41143b9f8100752b8a65, type: 3}
-  m_Name: 6-23
+  m_Name: 8-20
   m_EditorClassIdentifier: 
-  CharacterName: "\uAE40\uBBFC\uC218"
-  text: "\uC5EC\uAE30\uB294 \uB0B4\uAC00 \uBC84\uD168\uBCFC \uD14C\uB2C8\uAE4C \uBE68\uB9AC
-    \uC5B4\uB5BB\uAC8C\uB4E0 \uD574\uBD10!!"
+  CharacterName: $player
+  text: "\uC774\uAC8C \uBB50\uD558\uB294 \uC9D3\uC774\uC57C! \uBE68\uB9AC \uB194"
   fontSize: 45
   textSpeed: 15
   hasOption: 0
-  nextScenario: {fileID: 11400000, guid: aab59a2a009387f4d8dc3b98038c2b6c, type: 2}
+  nextScenario: {fileID: 11400000, guid: ccb92a21e6ec16249b91f0c69b363723, type: 2}
   options: []
-  changeScene: 1
-  sceneName: Mini game 2
+  changeScene: 0
+  sceneName: 
   background: {fileID: 0}
   imageLeft: {fileID: 0}
   imageMiddle: {fileID: 0}
