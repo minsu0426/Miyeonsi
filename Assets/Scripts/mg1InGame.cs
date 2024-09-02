@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 public class mg1InGame : MonoBehaviour
 {
@@ -18,7 +19,6 @@ public class mg1InGame : MonoBehaviour
     {
         Debug.Log("HelloWorld!!");
         myNum2 = 30;
-        numTxt.text = "0";
         kwang.SetActive(false);
     }
 
@@ -31,17 +31,16 @@ public class mg1InGame : MonoBehaviour
     {
         Debug.Log("Click!!");
         myNum++;
-        Debug.Log("myNum: " + myNum);
-        numTxt.text = myNum.ToString();
-        
 
         if (myNum >= myNum2)
         {
             kwang.SetActive(true);
+            door.SetActive(false);
         }
-        if (myNum == 50)
+
+        if (myNum >= 50)
         {
-            //nextscene
+            SceneManager.LoadScene(FlowManager.Instance.mainGameSceneName);
         }
 
     }

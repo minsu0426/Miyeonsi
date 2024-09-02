@@ -32,6 +32,8 @@ public class FlowManager : MonoBehaviour
     private string replaceName = "$player";
     public string playerName = "main";
 
+    public string mainGameSceneName = "FirstGameScene";
+
     //singleton pattern
     private static FlowManager instance;
     public static FlowManager Instance
@@ -73,7 +75,7 @@ public class FlowManager : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Debug.Log("Scene " + scene.name + " loaded.");
-        if(scene.name == "FirstGameScene")
+        if(scene.name == mainGameSceneName)
         {
             StartScenario(scenarioData);
         }
@@ -163,6 +165,7 @@ public class FlowManager : MonoBehaviour
         {
             isinMainFlow = false;
             SceneManager.LoadScene(scenarioData.sceneName);
+            scenarioData = newScenarioData;
             return;
         }
         isinMainFlow = true;
