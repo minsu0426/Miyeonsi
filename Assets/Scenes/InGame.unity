@@ -760,7 +760,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uD655\uC778"
+  m_text: "\uAC8C\uC784\uC2DC\uC791\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 847f8c4616ac6584983114f8e10f14ff, type: 2}
   m_sharedMaterial: {fileID: 5701112916922910766, guid: 847f8c4616ac6584983114f8e10f14ff, type: 2}
@@ -895,7 +895,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\uC774\uB984\uC744 \uC785\uB825\uD558\uC2DC\uACE0 \uC5D4\uD130\uB97C \uB204\uB978\uB4A4
-    \uD655\uC778 \uBC84\uD2BC\uC744 \uB204\uB974\uC138\uC694\n(\uC774\uB984\uC740
+    \uAC8C\uC784\uC2DC\uC791 \uBC84\uD2BC\uC744 \uB204\uB974\uC138\uC694.\n(\uC774\uB984\uC740
     \uAC8C\uC784 \uC911 \uBCC0\uACBD\uD560 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 847f8c4616ac6584983114f8e10f14ff, type: 2}
