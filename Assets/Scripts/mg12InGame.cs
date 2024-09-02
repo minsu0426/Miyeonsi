@@ -70,6 +70,7 @@ public class QuizManager : MonoBehaviour
                 opendoor.SetActive(true);
                 closedoor.SetActive(false);
                 submitButton.interactable = false; // 더 이상 답 제출 불가능
+                //nextscene
             }
             else
             {
