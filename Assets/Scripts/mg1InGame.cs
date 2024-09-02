@@ -33,7 +33,6 @@ public class mg1InGame : MonoBehaviour
         myNum++;
         Debug.Log("myNum: " + myNum);
         numTxt.text = myNum.ToString();
-        
 
         if (myNum >= myNum2)
         {
@@ -41,7 +40,7 @@ public class mg1InGame : MonoBehaviour
         }
         if (myNum == 30)
         {
-            //´ÙÀ½¾ÀÀ¸·Î.
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
         }
 
     }
