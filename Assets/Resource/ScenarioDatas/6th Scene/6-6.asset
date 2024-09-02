@@ -26,5 +26,7 @@ MonoBehaviour:
   imageMiddle: {fileID: 0}
   imageRight: {fileID: 0}
   imageFront: {fileID: 0}
-  audioClip: {fileID: 0}
-  audioVolume: 1
+  soundEffect: {fileID: 8300000, guid: 1dfc06ac16055e64e8f25cc5bbde157e, type: 3}
+  SoundEffectVolume: 1
+  backgroundMusic: {fileID: 0}
+  backgroundMusicVolume: 1

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 6-16
   m_EditorClassIdentifier: 
   CharacterName: $player
-  text: "\uC5B4\u2026 \uC774\uC815\uB3C4\uBA74 \uAD1C\uCC2E"
+  text: "\uC5B4\u2026 \uC774\uC815\uB3C4\uBA74 \uAD1C\uCC2E\uC544"
   fontSize: 45
   textSpeed: 15
   hasOption: 0
@@ -26,5 +26,7 @@ MonoBehaviour:
   imageMiddle: {fileID: 0}
   imageRight: {fileID: 0}
   imageFront: {fileID: 0}
-  audioClip: {fileID: 0}
-  audioVolume: 1
+  soundEffect: {fileID: 0}
+  SoundEffectVolume: 1
+  backgroundMusic: {fileID: 0}
+  backgroundMusicVolume: 1

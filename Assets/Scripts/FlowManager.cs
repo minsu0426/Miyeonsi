@@ -212,7 +212,7 @@ public class FlowManager : MonoBehaviour
             AudioController.instance.PlayAudio(scenarioData.soundEffect, scenarioData.SoundEffectVolume);
         }
 
-        if (RunAudio.instance != null && scenarioData.background != null)
+        if (RunAudio.instance != null && scenarioData.ChangeBackgroundMusic)
         {
             RunAudio.instance.PlayBackgroundMusic(scenarioData.backgroundMusic, scenarioData.backgroundMusicVolume);
         }
