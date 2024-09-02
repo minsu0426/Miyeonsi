@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CharacterName: 
   text: "(\uB098\uB294 \uADF8 \uB9D0\uC5D0 \uAE0D\uC815\uD558\uB4EF \uC0B4\uC9DD
-    \uC6C3\uC740 \uD6C4\r(\n\uC55E\uC5D0 \uC788\uB294 \uC790\uAC08\uB3CC\uC744 \uD5A5\uD574
-    \uD2F0\uB77C\uBBF8\uC230 \uAC74\uC744 \uBC1C\uC0AC\uD588\uB2E4.)"
+    \uC6C3\uC740 \uD6C4 \uC55E\uC5D0 \uC788\uB294 \uD2F0\uB77C\uBBF8\uC230 \uAC74\uC744
+    \uBC1C\uC0AC\uD558\uB824\uACE0 \uC870\uC900\uD588\uB2E4)\r\n\r\n"
   fontSize: 45
   textSpeed: 15
   hasOption: 0
@@ -28,5 +28,8 @@ MonoBehaviour:
   imageMiddle: {fileID: 0}
   imageRight: {fileID: 0}
   imageFront: {fileID: 0}
-  audioClip: {fileID: 0}
-  audioVolume: 1
+  soundEffect: {fileID: 0}
+  SoundEffectVolume: 1
+  ChangeBackgroundMusic: 0
+  backgroundMusic: {fileID: 0}
+  backgroundMusicVolume: 1
