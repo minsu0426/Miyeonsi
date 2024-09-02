@@ -68,9 +68,11 @@ public class FlowManager : MonoBehaviour
 
     void Start()
     {
+        playerName = PlayerData.instance.GetPlayerName();
+
         StartScenario(scenarioData);
     }
-    
+
     IEnumerator ShowText()
     {
         textBox.fontSize = scenarioData.fontSize;

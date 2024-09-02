@@ -21,4 +21,9 @@ public class PlayerData : MonoBehaviour
     {
         playerName = name;
     }
+
+    public string GetPlayerName()
+    {
+        return playerName;
+    }
 }
