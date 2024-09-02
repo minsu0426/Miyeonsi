@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 5.0f; // 이동 속도
+    public float speed = 5.0f; // 일정한 이동 속도
 
     void Update()
     {
@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
         // 이동 벡터 계산
         Vector2 movement = new Vector2(moveX, moveY).normalized;
 
-        // 캐릭터 이동
+        // 일정한 속도로 캐릭터 이동
         transform.Translate(movement * speed * Time.deltaTime);
     }
 }
