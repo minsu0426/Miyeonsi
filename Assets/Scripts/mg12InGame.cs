@@ -7,81 +7,82 @@ using UnityEngine.SceneManagement;
 
 public class QuizManager : MonoBehaviour
 {
-    // ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½
+    
     [System.Serializable]
     public class Question
     {
-        public string questionText;  // ï¿½ï¿½ï¿½ï¿½ ï¿½Ø½ï¿½Æ®
-        public string correctAnswer; // ï¿½ï¿½ï¿½ï¿½ ï¿½Ø½ï¿½Æ®
+        public string questionText; 
+        public string correctAnswer; 
     }
 
-    public List<Question> questions; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®
-    public TextMeshProUGUI questionText;  // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½ï¿½ï¿½ TextMeshProUGUI
-    public TMP_InputField answerInput;    // ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ TMP_InputField
-    public Button submitButton;           // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Button UI
-    public TextMeshProUGUI feedbackText;  // ï¿½ï¿½ï¿½ ï¿½Çµï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½ï¿½ï¿½ TextMeshProUGUI
+    public List<Question> questions; 
+    public TextMeshProUGUI questionText;  
+    public TMP_InputField answerInput;    
+    public Button submitButton;           
+    public TextMeshProUGUI feedbackText;  
     public GameObject closedoor;
     public GameObject opendoor;
 
-    private int currentQuestionIndex = 0; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ï¿½ï¿½
+    private int currentQuestionIndex = 0; 
 
     void Start()
     {
-        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½Ê±ï¿½È­ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½Õ´Ï´ï¿½.
+        
         questions = new List<Question>
         {
-            new Question { questionText = "ÇÑ±Û", correctAnswer = "god" },
-            new Question { questionText = "1+2", correctAnswer = "3" }
+            new Question { questionText = "½ÅÇÏ°¡ ¿Õ°ú Çì¾îÁú ¶§ ÇÏ´Â ¸»Àº?", correctAnswer = "¹ÙÀÌÅ·" },
+            new Question { questionText = "°øÀÌ ¿ôÀ¸¸é?", correctAnswer = "Ç²º¼" }
         };
         opendoor.SetActive(false);
-        // Ã¹ ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½
+        
         DisplayQuestion();
 
-        // ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½ ï¿½ï¿½ï¿½ï¿½
+        
         submitButton.onClick.AddListener(CheckAnswer);
     }
 
-    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ UIï¿½ï¿½ Ç¥ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½
+    
     void DisplayQuestion()
     {
-        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Çµï¿½ï¿½ ï¿½Ø½ï¿½Æ® ï¿½Ê±ï¿½È­
+        
         questionText.text = questions[currentQuestionIndex].questionText;
         feedbackText.text = "";
 
-        // ï¿½äº¯ ï¿½Ô·ï¿½ ï¿½Êµå¸¦ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¿ï¿½ï¿½
+        
         answerInput.text = "";
         answerInput.ActivateInputField();
     }
 
-    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È£ï¿½ï¿½Ç´ï¿½ ï¿½Ô¼ï¿½
+    
     void CheckAnswer()
     {
-        // ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ò¹ï¿½ï¿½Ú·ï¿½ ï¿½ï¿½È¯ï¿½Ï¿ï¿½ ï¿½ï¿½ (ï¿½ï¿½Ò¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½)
+        
         string userAnswer = answerInput.text.ToLower().Trim();
         string correctAnswer = questions[currentQuestionIndex].correctAnswer.ToLower().Trim();
 
-        // ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½
+        
         if (userAnswer == correctAnswer)
         {
-            currentQuestionIndex++; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ¾î°¨
+            currentQuestionIndex++; 
 
-            // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+            
             if (currentQuestionIndex >= questions.Count)
             {
                 opendoor.SetActive(true);
                 closedoor.SetActive(false);
-                submitButton.interactable = false; // ï¿½ï¿½ ï¿½Ì»ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ò°ï¿½ï¿½ï¿½
+                submitButton.interactable = false; 
+
                 End();
             }
             else
             {
-                // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½
+                
                 DisplayQuestion();
             }
         }
         else
         {
-            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Çµï¿½ï¿½ Ç¥ï¿½ï¿½
+            
             feedbackText.text = "try again";
         }
     }

@@ -32,13 +32,13 @@ public class mg1InGame : MonoBehaviour
         Debug.Log("Click!!");
         myNum++;
 
-        if (myNum >= myNum2)
+        if (myNum == myNum2)
         {
             kwang.SetActive(true);
             door.SetActive(false);
         }
 
-        if (myNum >= 50)
+        if (myNum == 50)
         {
             SceneManager.LoadScene(FlowManager.Instance.mainGameSceneName);
         }
