@@ -83,7 +83,7 @@ public class QuizManager : MonoBehaviour
         else
         {
             
-            feedbackText.text = "try again";
+            feedbackText.text = "´Ù½Ã.";
         }
     }
 
