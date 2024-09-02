@@ -13,6 +13,8 @@ MonoImporter:
   - imageLeft: {instanceID: 0}
   - imageMiddle: {instanceID: 0}
   - imageRight: {instanceID: 0}
+  - imageFront: {instanceID: 0}
+  - BlinderPrefab: {fileID: 4422060328470265770, guid: 272540cd5aa147f46a0c58fa6cf174b2, type: 3}
   - scenarioData: {fileID: 11400000, guid: c6d05b1a4c1b58d4fb7063a4450ea20d, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}

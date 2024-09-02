@@ -545,7 +545,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -606.0917, y: -52}
+  m_AnchoredPosition: {x: -607.5, y: -50}
   m_SizeDelta: {x: 285, y: 135}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &526736430
@@ -694,7 +694,8 @@ MonoBehaviour:
   imageMiddle: {fileID: 1181081280}
   imageRight: {fileID: 17136067}
   imageFront: {fileID: 2003283815}
-  scenarioData: {fileID: 11400000, guid: c6d05b1a4c1b58d4fb7063a4450ea20d, type: 2}
+  BlinderPrefab: {fileID: 4422060328470265770, guid: 272540cd5aa147f46a0c58fa6cf174b2, type: 3}
+  scenarioData: {fileID: 11400000, guid: 8b85320cd42ade1409d585f8d1008bbf, type: 2}
   playerName: main
   mainGameSceneName: FirstGameScene
 --- !u!4 &758153932

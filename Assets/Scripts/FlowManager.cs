@@ -20,6 +20,8 @@ public class FlowManager : MonoBehaviour
     public Image imageRight;
     public Image imageFront;
 
+    public GameObject BlinderPrefab;
+
     public ScenarioData scenarioData;
 
     Coroutine textCor;
@@ -125,8 +127,7 @@ public class FlowManager : MonoBehaviour
             {
                 //
             } else {
-                EndCurrentScenario();
-                StartScenario(scenarioData.nextScenario);
+                EndCurrentScenario(scenarioData.nextScenario);
             }
         } else {
             if (textCor!= null)
@@ -155,20 +156,24 @@ public class FlowManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 페이드 아웃 효과를 주며 씬을 전환해, 메인 스토리 흐름으로 돌아갑니다.
+    /// </summary>
     public void ReturnToMainFlow()
     {
-        StartScenario(scenarioData.nextScenario);
+        StartCoroutine(BlindAndMoveScene(mainGameSceneName, 1));
     }
 
-    public void EndCurrentScenario()
+    public void EndCurrentScenario(ScenarioData nextScenario)
     {
         if (scenarioData.changeScene && isinMainFlow)
         {
             isinMainFlow = false;
-            SceneManager.LoadScene(scenarioData.sceneName);
-            scenarioData = scenarioData.nextScenario;
+            StartCoroutine(BlindAndMoveScene(scenarioData.sceneName,1));
+            scenarioData = nextScenario;
             return;
         }
+        StartScenario(nextScenario);
     }
 
     public void StartScenario(ScenarioData newScenarioData)
@@ -260,5 +265,28 @@ public class FlowManager : MonoBehaviour
             options[i].ShowOption();
             yield return new WaitForSeconds(0.5f);
         }
+    }
+
+    public IEnumerator BlindAndMoveScene(string sceneName, float duration)
+    {
+        CanvasGroup blinder = Instantiate(BlinderPrefab, Vector3.zero, Quaternion.identity).GetComponent<CanvasGroup>();
+        float elapsedTime = 0f;
+        float t = 0f;
+
+        while (elapsedTime < duration)
+        {
+            t = elapsedTime / duration;
+
+            // UI 요소의 투명도 서서히 증가
+            blinder.alpha = Mathf.Lerp(0f, 1f, t);
+
+            // 경과 시간 증가
+            elapsedTime += Time.deltaTime;
+
+            // 다음 프레임까지 대기
+            yield return null;
+        }
+        blinder.alpha = 1f;
+        SceneManager.LoadScene(sceneName);
     }
 }

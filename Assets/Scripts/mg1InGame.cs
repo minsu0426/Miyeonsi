@@ -40,7 +40,8 @@ public class mg1InGame : MonoBehaviour
 
         if (myNum == 50)
         {
-            SceneManager.LoadScene(FlowManager.Instance.mainGameSceneName);
+            FlowManager.Instance.ReturnToMainFlow();
+            //StartCoroutine(FlowManager.Instance.BlindAndMoveScene(FlowManager.Instance.mainGameSceneName, 1));
         }
 
     }

@@ -110,8 +110,7 @@ public class OptinoScript : MonoBehaviour
         rectTransform.anchoredPosition = targetPosition;
         canvasGroup.alpha = 0f;
         if (selected)
-            FlowManager.Instance.EndCurrentScenario();
-            FlowManager.Instance.StartScenario(scenarioData);
+            FlowManager.Instance.EndCurrentScenario(scenarioData);
         Destroy(gameObject);
     }
 }
