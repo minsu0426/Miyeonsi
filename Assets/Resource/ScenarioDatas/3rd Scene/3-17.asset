@@ -21,9 +21,10 @@ MonoBehaviour:
   options: []
   changeScene: 1
   sceneName: Mini game 1
-  background: {fileID: 0}
+  background: {fileID: 21300000, guid: 2f90dab9ef8cbbe49bef9c371e31ed39, type: 3}
   imageLeft: {fileID: 0}
-  imageMiddle: {fileID: 0}
+  imageMiddle: {fileID: 21300000, guid: bf3688591bab65149bed91c3cdffe7d1, type: 3}
   imageRight: {fileID: 0}
+  imageFront: {fileID: 0}
   audioClip: {fileID: 0}
   audioVolume: 1
