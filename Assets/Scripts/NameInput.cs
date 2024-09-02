@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class NameInput : MonoBehaviour
 {
@@ -9,7 +10,20 @@ public class NameInput : MonoBehaviour
 
     void Start()
     {
+        submitButton.interactable = false;
+
+        nameInputField.onValueChanged.AddListener(OnNameInputChanged);
+
         submitButton.onClick.AddListener(OnSubmitName);
+    }
+
+    void OnNameInputChanged(string input)
+    {
+        string trimmedInput = input.Replace(" ", "");
+
+        nameInputField.text = trimmedInput;
+
+        submitButton.interactable = !string.IsNullOrEmpty(input);
     }
 
     void OnSubmitName()
