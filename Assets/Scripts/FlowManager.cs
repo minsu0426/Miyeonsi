@@ -161,7 +161,7 @@ public class FlowManager : MonoBehaviour
         if (scenarioData.changeScene && isinMainFlow)
         {
             isinMainFlow = false;
-            SceneManager.LoadScene(newScenarioData.sceneName);
+            SceneManager.LoadScene(scenarioData.sceneName);
             return;
         }
         isinMainFlow = true;
