@@ -15,6 +15,7 @@ public class mg1InGame : MonoBehaviour
     public GameObject door;
     public TextMeshProUGUI numTxt;
     public GameObject kwang;
+    public AudioSource audioSource;
     void Start()
     {
         Debug.Log("HelloWorld!!");
@@ -31,6 +32,8 @@ public class mg1InGame : MonoBehaviour
     {
         Debug.Log("Click!!");
         myNum++;
+        audioSource.Play();
+
 
         if (myNum == myNum2)
         {
