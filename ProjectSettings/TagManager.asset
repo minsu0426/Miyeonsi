@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Num_pad
   - wall
+  - Cake
   layers:
   - Default
   - TransparentFX

@@ -26,9 +26,9 @@ public class BombDefuse : MonoBehaviour
 
     void Start()
     {
-        timeRemaining = 32f;
+        timeRemaining = 21f;
         UpdateTimerText();
-        Sequence_Rage = Random.Range(6,10);
+        Sequence_Rage = 7;
         correctSequence = new int[Sequence_Rage];
         originalColors = new Color[9];
 
@@ -114,7 +114,6 @@ public class BombDefuse : MonoBehaviour
             yield return new WaitForSeconds(blinkDuration + delayBetweenBlinks);
         }
     }
-
 
     IEnumerator BlinkButton(Button button)
     {

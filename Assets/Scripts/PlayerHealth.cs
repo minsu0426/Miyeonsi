@@ -88,13 +88,15 @@ public class PlayerHealth : MonoBehaviour
         gameCleared = true;
         Debug.Log("Game Cleared!");
         // 게임 클리어 처리 로직 (예: 클리어 씬으로 전환)
-  
+        SceneManager.LoadScene("GameClearScene2");
+
     }
 
     void GameOver()
     {
         // 게임 오버 처리 로직
         Debug.Log("Game Over!");
+        SceneManager.LoadScene("GameOverScene2");
     }
 
     void OnTriggerEnter2D(Collider2D other)
