@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 13-11
   m_EditorClassIdentifier: 
   CharacterName: 
-  text: "(\uADF8\uB7EC\uC790 \uB3CC\uC774..)"
+  text: "\uB204\uAD6C\uB97C \uB9DE\uD790\uAC83\uC778\uAC00? \r"
   fontSize: 45
   textSpeed: 15
   hasOption: 0
@@ -26,5 +26,8 @@ MonoBehaviour:
   imageMiddle: {fileID: 0}
   imageRight: {fileID: 0}
   imageFront: {fileID: 0}
-  audioClip: {fileID: 0}
-  audioVolume: 1
+  soundEffect: {fileID: 0}
+  SoundEffectVolume: 1
+  ChangeBackgroundMusic: 0
+  backgroundMusic: {fileID: 0}
+  backgroundMusicVolume: 1
