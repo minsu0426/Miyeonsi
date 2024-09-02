@@ -16,8 +16,8 @@ MonoBehaviour:
   text: "\uADF8 \uAE30\uACC4 \uC55E, \uC544\uB2C8 \uD2F0\uB77C\uBBF8\uC230 \uAC74
     \uC55E\uC5D0\uB294 \uC790\uC2E0\uC744 \uBCF4\uB77C\uB294\uB4EF, \uD669\uAE08\uD328\uB85C
     \uB41C \uC774\uB984\uD45C\uAC00 \uC788\uC5C8\uB2E4. \r\n"
-  fontSize: 30
-  textSpeed: 10
+  fontSize: 45
+  textSpeed: 15
   hasOption: 0
   nextScenario: {fileID: 11400000, guid: 261598c7b15eb734eb65d902b2305bdd, type: 2}
   options: []

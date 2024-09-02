@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: 10-13
   m_EditorClassIdentifier: 
   CharacterName: 
-  text: 
-  fontSize: 30
-  textSpeed: 10
+  text: "\uC624\uB978\uCABD \uAC00\uC2B4\uD30D\uC5D0 \uACE7 \uB5A8\uC5B4\uC9C8 \uB4EF
+    \uBCF4\uC774\uB294 \uBA85\uCC30\uC5D0 \uC801\uD600 \uC788\uB294 \uC774\uB984\uC774\uC600\uB2E4.\r\n"
+  fontSize: 45
+  textSpeed: 15
   hasOption: 0
-  nextScenario: {fileID: 0}
+  nextScenario: {fileID: 11400000, guid: 8457a292ca6ab1f4eb7990b95f5e7480, type: 2}
   options: []
   changeScene: 0
   sceneName: 

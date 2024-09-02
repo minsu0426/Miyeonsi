@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a698fc3fa7a41143b9f8100752b8a65, type: 3}
+  m_Name: 10-38
+  m_EditorClassIdentifier: 
+  CharacterName: $player
+  text: "\uC5EC\uAE30\uB97C \uD574\uCCB4\uD558\uBA74, \uD3ED\uBC1C\uC744 \uBA48\uCD9C
+    \uC218 \uC788\uC744\uC9C0\uB3C4 \uBAB0\uB77C!\r\n"
+  fontSize: 45
+  textSpeed: 15
+  hasOption: 0
+  nextScenario: {fileID: 11400000}
+  options: []
+  changeScene: 1
+  sceneName: Mini game 3
+  background: {fileID: 0}
+  imageLeft: {fileID: 0}
+  imageMiddle: {fileID: 0}
+  imageRight: {fileID: 0}
+  imageFront: {fileID: 0}
+  audioClip: {fileID: 0}
+  audioVolume: 1

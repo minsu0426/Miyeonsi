@@ -15,8 +15,8 @@ MonoBehaviour:
   CharacterName: 
   text: "\uADF8 \uC18C\uB9AC\uC5D0 \uC6B0\uB9AC\uB294 \uB3D9\uC2DC\uC5D0 \uB4A4\uB97C
     \uB3CC\uC544\uBD24\uB2E4. \r\n"
-  fontSize: 30
-  textSpeed: 10
+  fontSize: 45
+  textSpeed: 15
   hasOption: 0
   nextScenario: {fileID: 11400000, guid: 1d8367905b198e148b3c74295e9e195b, type: 2}
   options: []

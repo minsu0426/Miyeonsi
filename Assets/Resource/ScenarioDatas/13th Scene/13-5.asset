@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a698fc3fa7a41143b9f8100752b8a65, type: 3}
+  m_Name: 13-5
+  m_EditorClassIdentifier: 
+  CharacterName: 
+  text: "\uADF8\uB9AC\uACE0 \uBAA8\uB4E0 \uAC83\uC744 \uD2F0\uB77C\uBBF8\uC218\uB85C
+    \uBC14\uAFC0 \uC218 \uC788\uB294 \uD2F0\uB77C\uBBF8\uC230 \uAC74\uC73C\uB85C\r\n"
+  fontSize: 45
+  textSpeed: 15
+  hasOption: 0
+  nextScenario: {fileID: 11400000, guid: 6be3aa95e2e95724db0c46b7cc12703f, type: 2}
+  options: []
+  changeScene: 0
+  sceneName: 
+  background: {fileID: 0}
+  imageLeft: {fileID: 0}
+  imageMiddle: {fileID: 0}
+  imageRight: {fileID: 0}
+  imageFront: {fileID: 0}
+  audioClip: {fileID: 0}
+  audioVolume: 1

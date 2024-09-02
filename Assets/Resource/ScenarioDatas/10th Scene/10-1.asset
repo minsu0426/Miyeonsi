@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CharacterName: $player
   text: "\uC800\uAC70\u2026\uBB50\uC57C\u2026?\r\n"
-  fontSize: 30
-  textSpeed: 10
+  fontSize: 45
+  textSpeed: 15
   hasOption: 0
   nextScenario: {fileID: 11400000, guid: fd7f51f72b62b9943b2f0fff9f50b0b3, type: 2}
   options: []

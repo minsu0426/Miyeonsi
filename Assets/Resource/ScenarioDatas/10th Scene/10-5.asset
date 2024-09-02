@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CharacterName: "\uAE40\uBBFC\uC218"
   text: "\uD2F0\uB77C\uBBF8\uC230 \uAC74\uC774\uB77C\u2026\uC774\uB984 \uCC38 \uD2B9\uC774\uD558\uB124\r\n"
-  fontSize: 30
-  textSpeed: 10
+  fontSize: 45
+  textSpeed: 15
   hasOption: 0
   nextScenario: {fileID: 11400000, guid: b581bae29f7539e4ba18e21dc0796b92, type: 2}
   options: []
