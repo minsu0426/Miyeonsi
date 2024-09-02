@@ -2743,7 +2743,7 @@ MonoBehaviour:
   blinkColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   blinkDuration: 0.2
   delayBetweenBlinks: 0.1
-  startDelay: 0.2
+  startDelay: 5
   redLamp: {fileID: 1695676585}
   greenLamp: {fileID: 1075149038}
   success: {fileID: 11400000, guid: 336c40daa90d4284eab62caa11849260, type: 2}
